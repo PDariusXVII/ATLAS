@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center; /* Centra o conteúdo */
-    width: 250px; /* Ajustei para tela de celular */
+    width: 240px; /* Ajustei para tela de celular */
     height: 50px; /* Diminui a altura */
     margin: 0 auto; /* Centraliza horizontalmente */
     }
@@ -53,8 +53,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 50px; /* Diminui o tamanho do botão */
-    height: 50px; /* Diminui a altura do botão */
+    width: 40px; /* Diminui o tamanho do botão */
+    height: 40px; /* Diminui a altura do botão */
     background: #00fffc;
     border-radius: 50%;
     transition: all 1s;
@@ -113,13 +113,13 @@
     }
     
     .conter input:focus {
-    width: 200px; /* Aumenta um pouco a largura */
+    width: 190px; /* Aumenta um pouco a largura */
     opacity: 1;
     cursor: text;
     }
     
     .conter input:focus ~ .search {
-    right: -220px;
+    right: -210px;
     background: #151515;
     z-index: 6;
     }
@@ -149,127 +149,3 @@
     }
 }
 
-
-.conter {
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center; /* Centra o conteúdo */
-width: 250px; /* Ajustei para tela de celular */
-height: 80px; /* Diminui a altura */
-margin: 0 auto; /* Centraliza horizontalmente */
-}
-
-.conter .search {
-position: absolute;
-margin: auto;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-width: 60px; /* Diminui o tamanho do botão */
-height: 60px; /* Diminui a altura do botão */
-background: #00fffc;
-border-radius: 50%;
-transition: all 1s;
-z-index: 4;
-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4); /* Diminui o sombreado */
-}
-
-.conter .search:hover {
-cursor: pointer;
-}
-
-.conter .search::before {
-content: "";
-position: absolute;
-margin: auto;
-top: 18px; /* Ajusta a posição para ficar proporcional */
-right: 0;
-bottom: 0;
-left: 18px; /* Ajusta a posição proporcional */
-width: 10px; /* Diminui o tamanho do ícone */
-height: 1px;
-background: #000;
-transform: rotate(45deg);
-transition: all 0.5s;
-}
-
-.conter .search::after {
-content: "";
-position: absolute;
-margin: auto;
-top: -5px;
-right: 0;
-bottom: 0;
-left: -5px;
-width: 20px; /* Diminui a largura do círculo */
-height: 20px; /* Diminui a altura do círculo */
-border-radius: 50%;
-border: 2px solid #000;
-transition: all 0.5s;
-}
-
-.conter input {
-font-family: "Inconsolata", monospace;
-position: absolute;
-margin: auto;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-width: 40px; /* Ajusta o tamanho do campo de texto */
-height: 40px;
-outline: none;
-border: none;
-background: #00fffc;
-color: #000;
-text-shadow: 0 0 10px #00fffc;
-padding: 0 60px 0 15px; /* Ajusta o preenchimento */
-border-radius: 30px;
-box-shadow: 0 0 20px 0 #00fffc, 0 15px 20px 0 rgba(0, 0, 0, 0.2);
-transition: all 1s;
-opacity: 0;
-z-index: 5;
-font-weight: bolder;
-letter-spacing: 0.1em;
-}
-
-.conter input:hover {
-cursor: pointer;
-}
-
-.conter input:focus {
-width: 250px; /* Aumenta um pouco a largura */
-opacity: 1;
-cursor: text;
-}
-
-.conter input:focus ~ .search {
-right: -220px;
-background: #151515;
-z-index: 6;
-}
-
-.conter input:focus ~ .search::before {
-top: 0;
-left: 0;
-width: 20px; /* Ajusta o tamanho do ícone */
-}
-
-.conter input:focus ~ .search::after {
-top: 0;
-left: 0;
-width: 20px; /* Ajusta o tamanho do círculo */
-height: 2px;
-border: none;
-background: white;
-border-radius: 0%;
-transform: rotate(-45deg);
-}
-
-.conter input::placeholder {
-color: #000;
-opacity: 0.8;
-font-weight: bolder;
-}
