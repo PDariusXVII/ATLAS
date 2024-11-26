@@ -1,0 +1,275 @@
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        /* Definindo o background com a imagem e o gradiente */
+        background-image: url("/ATLAS/IMAGEM/homem mb.jpg"), 
+                          linear-gradient(rgba(0, 174, 255, 0.5), rgba(0, 0, 255, 0.5));
+        
+        /* Definindo o tamanho de cada camada do background */
+        background-size: cover, cover; /* A imagem e o gradiente cobrem toda a área */
+        
+        /* Garantindo que o fundo não se repita */
+        background-repeat: no-repeat;
+        
+        /* Definindo o posicionamento da imagem */
+        background-position: top, top; /* Foco no topo para ambas as camadas */
+        
+        /* Cor de fundo adicional para dispositivos móveis */
+        background-color: rgba(0, 0, 255, 0.7); /* Azul mais intenso no mobile */
+    }
+    
+
+    .livros{
+    color: white;
+    }
+    
+    .logo {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    
+    .conter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra o conteúdo */
+    width: 250px; /* Ajustei para tela de celular */
+    height: 50px; /* Diminui a altura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    }
+    
+    .conter .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px; /* Diminui o tamanho do botão */
+    height: 50px; /* Diminui a altura do botão */
+    background: #00fffc;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4); /* Diminui o sombreado */
+    }
+    
+    .conter .search:hover {
+    cursor: pointer;
+    }
+    
+
+    
+    .conter .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 20px; /* Diminui a largura do círculo */
+    height: 20px; /* Diminui a altura do círculo */
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: all 0.5s;
+    }
+    
+    .conter input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px; /* Ajusta o tamanho do campo de texto */
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #00fffc;
+    color: #000;
+    text-shadow: 0 0 10px #00fffc;
+    padding: 0 60px 0 15px; /* Ajusta o preenchimento */
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 #00fffc, 0 15px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    }
+    
+    .conter input:hover {
+    cursor: pointer;
+    }
+    
+    .conter input:focus {
+    width: 200px; /* Aumenta um pouco a largura */
+    opacity: 1;
+    cursor: text;
+    }
+    
+    .conter input:focus ~ .search {
+    right: -220px;
+    background: #151515;
+    z-index: 6;
+    }
+    
+    .conter input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 20px; /* Ajusta o tamanho do ícone */
+    }
+    
+    .conter input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 20px; /* Ajusta o tamanho do círculo */
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+    }
+    
+    .conter input::placeholder {
+    color: #000;
+    opacity: 0.8;
+    font-weight: bolder;
+    
+    }
+}
+
+
+.conter {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center; /* Centra o conteúdo */
+width: 250px; /* Ajustei para tela de celular */
+height: 80px; /* Diminui a altura */
+margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.conter .search {
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 60px; /* Diminui o tamanho do botão */
+height: 60px; /* Diminui a altura do botão */
+background: #00fffc;
+border-radius: 50%;
+transition: all 1s;
+z-index: 4;
+box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4); /* Diminui o sombreado */
+}
+
+.conter .search:hover {
+cursor: pointer;
+}
+
+.conter .search::before {
+content: "";
+position: absolute;
+margin: auto;
+top: 18px; /* Ajusta a posição para ficar proporcional */
+right: 0;
+bottom: 0;
+left: 18px; /* Ajusta a posição proporcional */
+width: 10px; /* Diminui o tamanho do ícone */
+height: 1px;
+background: #000;
+transform: rotate(45deg);
+transition: all 0.5s;
+}
+
+.conter .search::after {
+content: "";
+position: absolute;
+margin: auto;
+top: -5px;
+right: 0;
+bottom: 0;
+left: -5px;
+width: 20px; /* Diminui a largura do círculo */
+height: 20px; /* Diminui a altura do círculo */
+border-radius: 50%;
+border: 2px solid #000;
+transition: all 0.5s;
+}
+
+.conter input {
+font-family: "Inconsolata", monospace;
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 40px; /* Ajusta o tamanho do campo de texto */
+height: 40px;
+outline: none;
+border: none;
+background: #00fffc;
+color: #000;
+text-shadow: 0 0 10px #00fffc;
+padding: 0 60px 0 15px; /* Ajusta o preenchimento */
+border-radius: 30px;
+box-shadow: 0 0 20px 0 #00fffc, 0 15px 20px 0 rgba(0, 0, 0, 0.2);
+transition: all 1s;
+opacity: 0;
+z-index: 5;
+font-weight: bolder;
+letter-spacing: 0.1em;
+}
+
+.conter input:hover {
+cursor: pointer;
+}
+
+.conter input:focus {
+width: 250px; /* Aumenta um pouco a largura */
+opacity: 1;
+cursor: text;
+}
+
+.conter input:focus ~ .search {
+right: -220px;
+background: #151515;
+z-index: 6;
+}
+
+.conter input:focus ~ .search::before {
+top: 0;
+left: 0;
+width: 20px; /* Ajusta o tamanho do ícone */
+}
+
+.conter input:focus ~ .search::after {
+top: 0;
+left: 0;
+width: 20px; /* Ajusta o tamanho do círculo */
+height: 2px;
+border: none;
+background: white;
+border-radius: 0%;
+transform: rotate(-45deg);
+}
+
+.conter input::placeholder {
+color: #000;
+opacity: 0.8;
+font-weight: bolder;
+}

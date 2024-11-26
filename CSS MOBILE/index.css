@@ -1,0 +1,12 @@
+/* Adaptações para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    background-color: rgba(0, 0, 0, 0.123); /* Cor de fundo como fallback */
+    background-image: url("/IMAGEM/SPIDE MB.jpg");  /* A imagem de fundo */
+    background-size: cover;   /* Faz a imagem cobrir toda a área do elemento */
+    background-position: center;  /* Centraliza a imagem dentro da área */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    border-radius: 25px;
+    background-blend-mode: overlay; /* Caso você queira dar um efeito de sobreposição */    
+  }
+}

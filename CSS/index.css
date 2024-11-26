@@ -1,0 +1,17 @@
+body {
+  display: grid;
+  grid-template-areas:
+     "header header header"
+    "left-aside main main"
+    "footer footer footer";
+  grid-template-rows: auto 200px 1fr; /* O header e o banner têm tamanhos fixos */
+  min-height: 100vh;  /* Garante que o layout ocupe toda a altura da tela */
+font-family: Arial, sans-serif;
+  background-image: url("/ATLAS/IMAGEM/bg.jpg");  /* A imagem de fundo */
+  background-size: cover;   /* Faz a imagem cobrir toda a área do elemento */
+  background-position: center;  /* Centraliza a imagem dentro da área */
+
+  
+}
+
+

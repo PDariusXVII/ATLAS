@@ -1,0 +1,12 @@
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .main {
+        bottom: 0; /* Ajusta a posição para evitar excesso de espaço */
+        height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+        left: 50%; /* Reajusta a centralização */
+        transform: translateX(-50%);
+        width: 95%; /* Reduz a largura para acomodar melhor em telas pequenas */
+        gap: 15px; /* Ajusta o espaçamento entre elementos */
+        padding: 20px 0; /* Adiciona espaçamento interno */
+    }
+}

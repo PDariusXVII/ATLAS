@@ -1,0 +1,77 @@
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;        /* Centraliza o conteúdo verticalmente */
+    background-color: #7a0000;
+    width: 55%;                /* Define a largura como total da tela */
+    border-radius: 15px;
+    left: 50%;                  /* Move o header para 50% da largura da tela */
+  }
+
+  nav {
+    display: flex; 
+    justify-content: center; /* Centraliza itens horizontalmente */
+  align-items: center;     /* Centraliza itens verticalmente */
+    gap: 5px; /* Reduz o espaçamento entre itens */
+
+  }
+
+  nav ul {
+    display: flex;          /* Define o nav como flexbox */
+    gap: 5px;
+
+  }
+
+  .link {
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    padding: 0.25rem 0.5rem; /* Ajusta o espaçamento interno */
+  }
+
+  
+.link:hover {
+  color: black;
+}
+
+.link:hover::after {
+  scale: 1 1;
+}
+
+
+.group {
+  left: 0;
+  margin-left: 0;
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.input {
+font-family: "Montserrat", sans-serif;
+width: 80%;
+height: 35px;
+padding-left: 1.5rem;
+}
+
+.input::placeholder {
+color: #bdbecb;
+}
+
+.input:hover {
+box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.input:active {
+transform: scale(0.95);
+}
+
+.input:focus {
+box-shadow: 0 0 0 2px #2f303d;
+}
+
+.search-icon {
+  left: 0.5rem; /* Ajusta posição do ícone */
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+}

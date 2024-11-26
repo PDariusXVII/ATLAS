@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+
+<link rel="stylesheet" href="/ATLAS/CSS/cards dos livros.css">
+<link rel="stylesheet" href="/ATLAS/CSS MOBILE/cards dos livros.css">
+
+
+<link rel="stylesheet" href="/ATLAS/CSS/index livros.css">
+<link rel="stylesheet" href="/ATLAS/CSS MOBILE/index livros.css">
+
+
+<link rel="stylesheet" href="/ATLAS/CSS/SCOLL.CSS">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Variável para armazenar o link do botão selecionado
+            let selectedLink = "";
+
+            // Quando um botão é selecionado
+            $(".bookmarkBtn").on('click', function () {
+                // Marcar o botão como selecionado
+                $(this).addClass('selected').siblings().removeClass('selected');
+
+                // Atualizar o link com base no botão selecionado
+                selectedLink = $(this).data('link');
+            });
+
+            // Ação do botão "Baixar"
+            $(".baixar").on('click', function () {
+                if (selectedLink) {
+                    // Abrir o link selecionado para download
+                    window.location.href = selectedLink;
+                } else {
+                    alert("Por favor, selecione uma opção para baixar.");
+                }
+            });
+        });
+    </script>
+
+<style>
+    .hidden {
+    display: none;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Biblioteca</div>
+
+        <div class="header-content">
+            <div class="conter">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <div class="search"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="cards-container">
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8LAc2WVwvUJR78s9VQJPgKxy1qicZMaJ7VyHYMSuGIcswHm08fQH84fhM7aVJjNeSgQS3SlvxexHl9DvII-d9rxzUzqTWM0hYT4aTGI-JWIys1igiJynFSSs7LscfpYu_TH8zWa058Ys/s640/capa-tormenta-de-espadas.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 22px;">A Tormenta de Espadas</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/A Tormenta de Espadas.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>
+                    </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/A%20Tormenta%20de%20Espadas.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar" download>
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/A1q+wZFZbGL._SY342_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">A Dança dos Dragões</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/A Dança dos Dragões.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/A%20Dan%C3%A7a%20dos%20Drag%C3%B5es.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/71tYpdeGdrL._AC_UF894,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 18px;">Cavaleiro dos Setes Reinos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/Cavaleiro dos Setes Reinos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/Cavaleiro%20dos%20Setes%20Reinos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/91PglZzF9kL.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros">Fúria dos Reis</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/Fúria dos Reis.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>
+                    </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/F%C3%BAria%20dos%20Reis.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/81j1UaQEcDL._SY300_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros">Fogo e Sangue</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/O MUNDO DE GELO E FOGO.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/Fogo%20e%20Sangue.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://books.google.com.br/books/publisher/content?id=DLKMDwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U3BQ_q5h1Il8EkHR2VpmK6uoNogzQ&w=1280" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 22px;">A Guerra dos Tronos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/A Guerra dos Tronos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/A%20Guerra%20dos%20Tronos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://imagens.disal.com.br/produtos/ampliada/5879795.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">O Festim dos Corvos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/O Festim dos Corvos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/O%20Festim%20dos%20Corvos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/618TXC2ibUL._AC_UF1000,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">O Mundo de Gelo & Fogo</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/O MUNDO DE GELO E FOGO.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/O%20MUNDO%20DE%20GELO%20E%20FOGO.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/61rI8vcG9BL._AC_UF894,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">Mulheres Perigosas</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/MULHERES PERIGOSAS.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>     </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/MULHERES%20PERIGOSAS.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>  </span>     <p class="text">EPUB</p>    </button>   </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/51XKrZGssyL._AC_SY200_QL15_.jpg" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 20px;">O príncipe de Westeros e outras histórias</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/O PRÍNCIPE DE WESTEROS E OUTRAS HISTÓRIAS.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>     </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/O%20PR%C3%8DNCIPE%20DE%20WESTEROS%20E%20OUTRAS%20HIST%C3%93RIAS.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>      </button>       </div>      </div> <!---FIM-->
+                        
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="IMAGEM" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">AUTOR</p>
+                        <h1 class="livros">NAME</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://exemplo.com/arquivo.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://exemplo.com/arquivo.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+        </div><!--FIM DO FIM-->
+    </div><!--FIM DO FIM FIM-->
+
+<script src="/ATLAS/JS/search.js"></script>
+<script src="/ATLAS/JS/loadCards.js"></script>
+
+</body>
+</html>

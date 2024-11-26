@@ -1,0 +1,8 @@
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .con {
+        height: 0;
+        width: 0;
+    }
+}

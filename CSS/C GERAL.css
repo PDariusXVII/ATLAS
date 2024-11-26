@@ -1,0 +1,235 @@
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #030013;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #4CAF50;
+        }
+
+        /* Contêiner do portfólio */
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(600px, 1fr)); /* Ajustado para 2 cards por coluna */
+            gap: 90px; /* Aumentado para mais espaçamento */
+            width: 100%;
+            max-width: 1600px; /* Aumentado para um contêiner maior */
+        }
+
+        /* Estilo de cada "frame" */
+        .portfolio-frame {
+            background-color: #1d1d1d56;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 800px; /* Aumentado para mais altura */
+        }
+
+        .portfolio-frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .frame-header {
+            background-color: #00cf07;
+            color: white;
+            padding: 50px; /* Aumentado o padding para mais espaço */
+            text-align: center;
+        }
+
+        .frame-body {
+            padding: 45px; /* Aumentado o padding para mais espaço */
+            text-align: center;
+            flex-grow: 1; /* Para garantir que o corpo do frame ocupe o espaço disponível */
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px; /* Aumentado a altura do iframe */
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-container {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .portfolio-frame {
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            iframe {
+                width: 300px;
+                height: 350px;
+                margin: 0 auto;
+            }
+        }
+
+        
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background-color: #00000096;
+}
+
+a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}

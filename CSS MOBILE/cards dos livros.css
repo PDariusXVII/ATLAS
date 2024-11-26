@@ -1,0 +1,31 @@
+/* Adicione um media query para telas menores */
+@media (max-width: 768px) {
+    .cards-container {
+        justify-content: space-between; /* Ajusta o espaçamento dos cards */
+        gap: 15px; /* Menor espaço entre os cards */
+    }
+
+    .container {
+        width: calc(50% - 10px); /* Dois cards por linha, com gap compensado */
+        min-width: unset; /* Remove restrições de largura mínima */
+        max-width: unset; /* Remove restrições de largura máxima */
+        height: 466px;
+        padding: 10px; /* Reduz o padding */
+    }
+
+    .container img {
+        width: 120px; /* Ajusta o tamanho da imagem para telas menores */
+    }
+
+    .livros {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    .autor {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+}

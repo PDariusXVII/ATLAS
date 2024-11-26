@@ -1,0 +1,26 @@
+.main {
+    bottom: -480px;
+    grid-area: main;
+  
+    align-items: center;
+    position: absolute; /* Permite posicionamento personalizado */
+    height: 100%;
+    left: 55%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro exato */
+    width: 88%; /* Garante que ocupe toda a largura */
+    z-index: 0; /* Coloca acima de todos os outros elementos */
+
+}
+
+.iframe {
+    top: -300px;
+    position: absolute; /* Permite posicionamento personalizado */
+    height: 600px;
+    left: 55%; /* Centraliza horizontalmente */
+    transform: translateX(-55%); /* Ajusta para o centro exato */
+    width: 88%; /* Garante que ocupe toda a largura */
+    z-index: 0; /* Coloca acima de todos os outros elementos */
+    flex-direction: column; /* Para exibir os vídeos um abaixo do outro */
+    gap: 20px;
+    align-items: center;
+}
