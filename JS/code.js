@@ -2,7 +2,7 @@
 function updateCategoryCounts() {
   // Definir as chaves de cada categoria
   const categories = [
-    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor'
+    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'foorter'
   ];
 
   // Variável para armazenar o total de itens
@@ -35,6 +35,7 @@ function updateCategoryCounts() {
   const cardsCount = parseInt(localStorage.getItem('cards-count')) || 0;
   const containersCount = parseInt(localStorage.getItem('containers-count')) || 0;
   const cursorCount = parseInt(localStorage.getItem('cursor-count')) || 0;
+  const foorterCount = parseInt(localStorage.getItem('foorter-count')) || 0;
 
   // Atualiza os valores no HTML
   document.getElementById('album-count').innerText = albumCount;
@@ -43,9 +44,10 @@ function updateCategoryCounts() {
   document.getElementById('cards-count').innerText = cardsCount;
   document.getElementById('containers-count').innerText = containersCount;
   document.getElementById('cursor-count').innerText = cursorCount;
+  document.getElementById('foorter-count').innerText = foorterCount;
 
   // Soma total de itens de todas as categorias
-  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount;
+  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount + foorterCount;
   document.getElementById('all-count').innerText = totalItems;
 }
 
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", updateCategoryCounts);
 function updateCategoryCounts() {
 // Definir as chaves de cada categoria
 const categories = [
-'album', 'animation', 'buttons', 'cards', 'containers', 'cursor'
+'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'foorter'
 ];
 
 // Variável para armazenar o total de itens
