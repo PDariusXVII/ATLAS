@@ -2,7 +2,7 @@
 function updateCategoryCounts() {
   // Definir as chaves de cada categoria
   const categories = [
-    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer'
+    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer','forms'
   ];
 
   // Variável para armazenar o total de itens
@@ -36,6 +36,7 @@ function updateCategoryCounts() {
   const containersCount = parseInt(localStorage.getItem('containers-count')) || 0;
   const cursorCount = parseInt(localStorage.getItem('cursor-count')) || 0;
   const footerCount = parseInt(localStorage.getItem('footer-count')) || 0;
+    const formsCount = parseInt(localStorage.getItem('forms-count')) || 0;
 
   // Atualiza os valores no HTML
   document.getElementById('album-count').innerText = albumCount;
@@ -45,9 +46,10 @@ function updateCategoryCounts() {
   document.getElementById('containers-count').innerText = containersCount;
   document.getElementById('cursor-count').innerText = cursorCount;
   document.getElementById('footer-count').innerText = footerCount;
+    document.getElementById('forms-count').innerText = formsCount;
 
   // Soma total de itens de todas as categorias
-  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount + footerCount;
+  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount + footerCount + formsCount;
   document.getElementById('all-count').innerText = totalItems;
 }
 
@@ -58,7 +60,7 @@ document.addEventListener("DOMContentLoaded", updateCategoryCounts);
 function updateCategoryCounts() {
 // Definir as chaves de cada categoria
 const categories = [
-'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer'
+'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer', 'forms'
 ];
 
 // Variável para armazenar o total de itens
@@ -79,5 +81,4 @@ document.getElementById('all-count').innerText = totalItems;
 
 // Executa a atualização das contagens ao carregar a página
 document.addEventListener("DOMContentLoaded", updateCategoryCounts);
-
 
