@@ -2,7 +2,7 @@
 function updateCategoryCounts() {
   // Definir as chaves de cada categoria
   const categories = [
-    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer','forms'
+    'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer', 'forms', 'inputfield'
   ];
 
   // Variável para armazenar o total de itens
@@ -36,7 +36,8 @@ function updateCategoryCounts() {
   const containersCount = parseInt(localStorage.getItem('containers-count')) || 0;
   const cursorCount = parseInt(localStorage.getItem('cursor-count')) || 0;
   const footerCount = parseInt(localStorage.getItem('footer-count')) || 0;
-    const formsCount = parseInt(localStorage.getItem('forms-count')) || 0;
+  const formsCount = parseInt(localStorage.getItem('forms-count')) || 0;
+  const inputfieldCount = parseInt(localStorage.getItem('inputfield-count')) || 0;
 
   // Atualiza os valores no HTML
   document.getElementById('album-count').innerText = albumCount;
@@ -46,10 +47,11 @@ function updateCategoryCounts() {
   document.getElementById('containers-count').innerText = containersCount;
   document.getElementById('cursor-count').innerText = cursorCount;
   document.getElementById('footer-count').innerText = footerCount;
-    document.getElementById('forms-count').innerText = formsCount;
+  document.getElementById('forms-count').innerText = formsCount;
+  document.getElementById('inputfield-count').innerText = inputfieldCount;
 
   // Soma total de itens de todas as categorias
-  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount + footerCount + formsCount;
+  let totalItems = albumCount + animationCount + buttonsCount + cardsCount + containersCount + siteCount + cursorCount + footerCount + formsCount + inputfieldCount;
   document.getElementById('all-count').innerText = totalItems;
 }
 
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", updateCategoryCounts);
 function updateCategoryCounts() {
 // Definir as chaves de cada categoria
 const categories = [
-'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer', 'forms'
+'album', 'animation', 'buttons', 'cards', 'containers', 'cursor', 'footer', 'forms', 'inputfield'
 ];
 
 // Variável para armazenar o total de itens
