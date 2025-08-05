@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>FILMES</title>
+  <style>
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .matrix-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: -1;
+    }
+
+    .matrix-column {
+      position: absolute;
+      top: -100%;
+      width: 20px;
+      height: 300%;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: bold;
+      animation: fall linear infinite;
+      white-space: nowrap;
+      color: #00ff41;
+      opacity: 0.7;
+    }
+
+    .matrix-column::before {
+      content: "アイウエオカキクケコサシスセソABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      position: absolute;
+      top: 0;
+      writing-mode: vertical-lr;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+
+    .content-wrapper {
+      display: flex;
+      min-height: 100vh;
+      background: rgba(10, 15, 37, 0.7);
+      position: relative;
+      z-index: 10;
+    }
+
+    aside {
+      background: linear-gradient(180deg, #112154, #0b1439);
+      width: 270px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      box-shadow: 4px 0 15px #00000055;
+    }
+
+    aside h1 {
+      color: #6cb6ff;
+      text-align: center;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav a {
+      color: #8fbffc;
+      text-decoration: none;
+      padding: 0.9rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #6cb6ff33;
+      color: #ffffff;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: relative;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #6cb6ff;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.4);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 1rem 1rem 0;
+      color: #6cb6ff;
+    }
+
+    .card p {
+      padding: 0 1rem 1rem;
+    }
+
+    .astronaut {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      max-width: 80%;
+      animation: float 3s ease-in-out infinite;
+      z-index: 20;
+    }
+
+    .moon {
+      position: absolute;
+      bottom: 20%;
+      left: 35%;
+      width: 250px;
+      animation: rotate 10s linear infinite;
+      z-index: 15;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -20px); }
+      100% { transform: translate(-50%, 0); }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Navegação mobile (cards) */
+    .mobile-nav-cards {
+      display: none;
+      margin-top: 2rem;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      padding: 0 1rem;
+    }
+
+    .mobile-nav-card {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid #6cb6ff55;
+      border-radius: 10px;
+      padding: 1rem;
+      color: #6cb6ff;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .mobile-nav-card:hover {
+      background: #6cb6ff33;
+      transform: scale(1.05);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      aside {
+        display: none;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .astronaut {
+        width: 90px;
+        bottom: 10px;
+      }
+
+      .moon {
+        width: 100px;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .mobile-nav-cards {
+        display: grid;
+      }
+
+      .matrix-column {
+        width: 10px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="matrix-background" id="matrixBackground"></div>
+
+  <div class="content-wrapper">
+    <!-- Menu lateral (só para desktop) -->
+    <aside>
+      <h1>Portal Espacial</h1>
+      <nav>
+        <a href="#" class="tab-link active" data-tab="home">Início</a>
+        <a href="#" class="tab-link" data-tab="filme">Filmes</a>
+        <a href="#" class="tab-link" data-tab="manga">Mangás</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="home" class="active">
+        <h2>BEM-VINDO</h2>
+
+        <!-- Navegação por cards no mobile -->
+        <div class="mobile-nav-cards">
+          <div class="mobile-nav-card" data-tab="home">Início</div>
+          <div class="mobile-nav-card" data-tab="filme">Filmes</div>
+          <div class="mobile-nav-card" data-tab="manga">Mangás</div>
+        </div>
+
+        <img src="https://uiverse.io/astronaut.png" alt="Astronauta" class="astronaut">
+        <img src="https://img.icons8.com/ios-filled/120/ffffff/moon.png" alt="Lua" class="moon">
+      </section>
+
+      <section id="filme">
+        <h2>Filmes</h2>
+        <div class="cards-container">
+
+          <div class="card">
+            <a href="https://www.boraflix.com/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEVHcEwaKzIaKzIaKzITKzMUKzUXKzMYKzIVKzQaKzIYKzMkKTITKzUYKzIZKzIYKjQXKzL/AAD/AAAUKzQALDP/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AABNQ0CuAAAAIHRSTlMAJjIxXIZyGNj3wgz/5v+yihIZp4d/6c5mro//wSo6Q9XBZZIAAACxSURBVHgBxdEFEoRADETRxt3d73/LTWYtNVg5H+fh4JkM07JMAyLboVxQnh9QYfS3yI+pJGJMUsrfof/F0LUhipAJzFGUZRkBvKRQCayblup6YGi5IZM4TqoenVrOOjYN7WQcx7HfIU+MBYBqf9l2Yey6eYfDQMpI7XDFTHvVPZsddnwSY3R8z5MH2uhaY7MA/djoZ+bQklh5niS38hnvf9kOs4QKeU9ku5QNkafCI70A1cUYMDX4VkgAAAAASUVORK5CYII" alt="Boraflix">
+            </a>
+            <h3>Boraflix</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://minhaserie.net/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAS1BMVEVHcEzzJz/vJz/sJT30Jj/sJT3sJj7uJz/uJj7uJj7tJj7tCi7uHDf4J0H3r7b96+3ycHzxZnP////wS130j5nxJz/6y8/vQlTyJj9Iz+QrAAAAGXRSTlMAUoApCnHX/6/oXv//FP/////////D//+UKnHItwAAAMZJREFUeAF90kUChDAQRNFCK8Ed7n/RcemOvW0+RKFk+VOBoLKq+WUyeCoqtoFSWLoMhIYBdXpcFgWZLixjcmf9bdtR6wGU/BnGqaVi5A+6eVmWoesolYBVwTKurbMKyuBpk8WOzAuWg2Ia5H6wjHObCp6GNhU8raFgWn5GpgOxTBR+MMqNAl5wnGL8AowTbOrGMiCTgXvSVM/hfO6/o3SpB9d1bKlYvBjGZHirKakJksUOJIsLUk6HzaD1xvncV+b7d1R8fQfweRypziD1twAAAABJRU5ErkJggg==" alt="Netflix">
+            </a>
+            <h3>Ultracine</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://doramogo.cc/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEwAAAAAAAAAAAAAAAAAAABCBQ5aBxSIDyLXGTb7HT/xGz3iGjksAwhyCRnIFDGsDykZAAIAnU0ASiMAJhEA6HIAxGAA4G4A2WoAeDkArlXD79OVAAAABnRSTlMAYMr9/9/WMKwKAAAA+ElEQVR4AXTSBxaDIBBFUcunzdgbkP0vNCDhxPoS67VrESqrGpfqqiz2BHJSKYmcOJo2RMxERv+1/BE1ukWo1Q112CuLCrE+r4h1ZkCsKmqEGoNTg0aoLvb9DpbqFEIRNeGWGn94PB+mGQuAsU2oG6TaZd0m62CRiphvrCM5rdY55w9ILWKSmDofzE5/lIQ9w8w0uqhbRijOOzL33lrrNn9FHZC6zfp5/dwO23NA5TF0H3u7IMOxgYkxH7DXCDWco/aA3ZD2zDbggBhkHFEi1jih7BC1aRozdMARo0o8ll52Oz5ZXVR4rSrKdywPn+2h44f7bt/hyQ4A2WITX+QHOLMAAAAASUVORK5CYII" alt="FILMES">
+            </a>
+            <h3>Doramogo</h3>
+          </div>
+  
+                  <div class="card">
+            <a href="https://megaflix8.com/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAw1BMVEWYkZHoXl7ZCAjZUVHukpLZAgLYLCzpdHTjW1vZNzfaDg7cRUXiPz/UNjbZGxviOjrWMDDfaGjcQEDeFRXUCgrlZWXUICDVKSnYIyPYKSn37+/ZExP139/aAADZAAD+/f3+///NAACQCAiwAADz6eneISH8+PjztbW+AwPfSkqcAADlYGDrjo6PKyvn09O8ioqaPT2qaWn58vLnd3fcDw/029vgODjDl5fzysrdyMjwoqLLpaWiTU3Qr6/RsbGwIyPRcXGst+i6AAAAHXRSTlMBMfV3Cfy4EiOj6IpOddZHr1pn4PBH1snWxOLpj1pE/dEAAAF9SURBVCiRbZPpkoIwEIQDCAkoKlqeuwPhBsH7PvZ4/6faBFCOtX+kyHyVztSkQagQFqT+eNidqAZpobpwTxFBBiZZ1lShhgU1A0996LhknS401CcvNmwyAKWgwr9zTKaaOWP1DQMQBxz25LcQpswYK1WzTAAH3wdgRwUxL/GCfzrFSbLfp7dwb8MMIwn8ZJ+mbB+Gl8vRCyiXt3VBJKgv+/Hv/epRK6tamejVsUE20BhMO4p+No+1Z70UnBfsZgkN8z7sZFUy6m1cVm4jPgHzEIcBrcAVc+VwAqYf33bPyyz+Fay5K7NVT0m4Kxqh1uq89ijdZa7yCBmXwpDS4LpeOm4aFK4aQWSeE+rdt8uFa8MhpFmvoLZQ65O5Wd7XduO4kc07j48P7mp2+IvNj9/bpbOIbLMYcOxEbFX4m7X0JT9jlsOX+Ubr5eHql6TA7Dn1IiZEgabE9iuApB4+MDW9Ek48mFaZ0qunmgxmYh5qTe1g1BQmhtRuS6PK3/AHutBJepUZlJEAAAAASUVORK5CYII=" alt="Boraflix">
+            </a>
+            <h3>Megaflix8</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://netcinetv.lat/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAqFBMVEVHcEz/////+Pj9zs7//v7/7e38ysr8ysr7ycn+Cwv5AAD3AAD0AAD////9bWz4AAD9AQH6AAD4AAD1AAD2AADzAAD2AAD9FRb/kJD1AAD7AAD/////VVT/AAD7AAD4AwL3AAD2AAD/jY39AAD4AAD5AAD/ior5AAD8AAD/Kif8AAD8AAD8AAD/AAD7EQ//AAD/AAD+AAD/3Nr7Kin////7KCb/VlX+PT7zB/yXAAAAOHRSTlMAAQU7Jh1aV14fnbAwDoYnDl+79/L+ymklwkURrutx4P/pTP/Xz2iIqKX5gZRMrgZX84boNezNFUcwuiAAAAEOSURBVHgB1dFVYsMgAABQYhWIYnHXurf3v9ni8/8twR8O+K+f8Hur8AsCUZLELpPbTJEWi+VKUsQJ1xCpbabp0DAtTAhl3HamiQyXIU8AfhBGFopJkiSpm02oYsag0WLOccxxEWO3rGbkDNaNKm7ybVzwJrIgjBwwI4l28f6A84TFR9s8WWcTzOiyAkFUXNrV2FUEgu8LHxFDXKakRar74+lHV8vUs9ISFq250FYGmbCIZbPGBUlozPeH9vxOJQEw4e0OzN0lp6gp957iryN3PopRPO5AWO+2F8uDZfx8FmWTTfjaB3K7xguiNTg04eVywefXfPGKLHa53GaafG8/2Rc/P9mHN+yP0ca/9r0BSAgYgAZWIYAAAAAASUVORK5CYII=" alt="Netflix">
+            </a>
+            <h3>NetCine</h3>
+          </div>
+          
+          <div class="card">
+            <a href="https://superflix11.lol/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAWlBMVEVHcEwABQUAqtIAwPMAwfUAxfkAx/wAxv0AyP0Ax/wAv+8AJSsAyPwAx/sAyP4AxvwAyPsAx/0AxfgAx/wAwvAAueUAwPEAwvEAocsAyPwAt+QAX3cAc5AAlrnSD1rGAAAAHnRSTlMAAQhwiLf7/9F5IwJc2//vTOegQBUxlf99xeY9bGocbWiOAAABo0lEQVR4AVVRB6KFMAjDGSd1+9+6/zV/A/WNuBBiklZxZLzlRVnVaMq2e/f6Xt4YRkWChjKPhIws8ohpxi/aJJJui309VsO6TmVTI6LZXMM4DTvVzpKmWxsAhPieGJzPNs54xVu+kNEljQWKRsSHl+1AS5eYaMih23nTGHpYPQMz5z0F+reLtIDuzsQqNhRJLi4zApUnrK7BNLBIWWUFzlxyE4jNPl4BTZfILqF/UgBjn3o5l39wlw3SUrwEblf83PY7DGKZzQNSKYoUjgQFQB9T6GpA4jWJh4oW6gwdhOhnheBN8AyqJBzuOQNc5SC2MrMwnNGUO7YFgCErkt8ZFEsu3NEUsrUf8WUx8i97yAF6l06BTpJF0Lp474LIDVqKBOBICnIsW6ro2gF4CEPA2uLI3oSKDpLl8L3MHM7kfAL0ybqAouW64plAzlYrBUhtAFg2t/dzC6rnQzKvASx9sufl+nhdyXYy5iGXC3sF6PnnBiR1o5KyTOu27WvRgPOX9PLBAkcIMOj9wfZ77aaqSEPV8BLX5tJSKflfZVPM5eP9YfYPaY4UAUiqhBkAAAAASUVORK5CYII=" alt="FILMES">
+            </a>
+            <h3>SuperFlix</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://overflix.lol/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC+UlEQVR4AcTXA3TkYBQF4KxZ21zbtm3btm3btm3btm0bdXvf3kWNDLrTe843zJ/34kQRkTL0lHxoGbkrhszf4uHiR7PIzlANeFFU+UljySyuGgjOZ+pPKeOqgeC8pTJx1cBFqkrxDN3AWaoYobBBGjhFZTQcX4JKxVYDR6mEhuPK0CkKzmHKp2sDB6mI6rSKEm9fEqOKh21dzj6bPgtBvr6Q8AFto8zaNJBbo8KJTavuT2pykSTYcc/0eLlkORAQIBESSCvJQ9EnQxUl/r7EJjX3JTG5Glw0Kqcy5cDbjZuBoCCJEH+aQ/babpYEVPfptFk3DpnbBRdSdTZvIXzYewASOV40nizUCiekhnQn5MLw9h3udO2JA8ZWGjdysWR5+L55K1HkKw2klBELJ6KmdJ+ijPfTZ7jRog32pzCXfSyi5laHLhJD3lEXSszi0oIeiVrAUQcO4UiWXNiRzFTUXGMDGmS96qkYgLzZux9HipbEphRmoonjpcrB5/Ub0SA/ghuIsvDLnbuxv1BxrDWyEE0cLlMRb48chQCiYeZFagA8lJ5u24GdBYpiubGlqFlhYikHKlbFuxOnIJrnKtWkeCENIDBQHm3eis35CmOhqbWoWWRmLfuq1cK7s+dUCqtcVVnY6/76jVibpyDmmNuIpuaa28rOmnXx/uo1TRo4F+1VdWnOvF7TLe1EZ1b2srtZS3y+/wDRXFXLKjFlkrW910TORF+T7Zxlb5du+PbiJVj0GJVUNMkYG0cvkojGcYbbWrfDoYFDMcHFQ/ibqnE2Dgene6YtomiT4XZOXsPsnCTYCEdX2dK+Ez6EWaXfX7/Gzh69MdLJLWS6YBwP2jva3rmAoksGObh4kQzhUm7p0h0fHz2GRBP+h/XtOmCwk6twDAY7OO8c7uiaR9En/d08vTb17I1Pz55BNAseHD++pa+dcw4lNvLl1Ssv0SxBtJGyGvq2PJDWUkZDP5gE0EpK978fzR5HcRu1hFIb6uG0GN2lL/Rrs+ndPQcAnhC6tFUqUYoAAAAASUVORK5CYII=" alt="FILMES">
+            </a>
+            <h3>OverFlix</h3>
+          </div>
+          
+          <div class="card">
+            <a href="https://meteflix.pro/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEVHcEwfsuggtOodsOcesegSlskJhLAaq+ILibcXpt4MiLUOl8gXp98VpN0LiLULkMALibYVo9sNk8QLi7oLkMAXpt8Wpd0MhrENgKkcruUNg60fsugfs+nQKpmTAAAAHXRSTlMALVt5//44/7f//w54/33/Vv/R/Zhxiej/imveZrab7vgAAADPSURBVHgBtdEFFsMgEEXR3wQy+BDX/a+zQN2O90U5Nx78sVNVVadfw1oIIR8o07B+xeY2at6RhFS3kZJEz0ikpbEoWSM10QOd9l6agFIw0nvt3pBR4u8YkYpfsE3YIdV9oC9nsgUsF/Rv2DMPwMDcf2KXkAFO2L1iuqfLGGNG1z7fc8wYmLnr0ipkHF9wQl9ixvQFlSmqPtFPaEypweTfUE/AvJjFzMCkX1HTCmxLagNW0s9IJBIiIxIKogfWJPYDQAwhAjh28fQ/LT6y+F9nCf0P/4tEcrwAAAAASUVORK5CYII=" alt="FILMES">
+            </a>
+            <h3>MeteFlix</h3>
+          </div>
+
+          <div class="card">
+            <a href="https://sofilme.my/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAdCAMAAAD8QJ61AAAAe1BMVEVHcEwGBgYGBgYGBgYGBgYFBQUGBgYGBgYAAAC7vb3///+zs7MnJydRTU3x8fF8eXlhYmIYCgoABgbY2Nji5ub/w8PPLS3BBAWIBgaJiYncfHz/LS7+BAXOzs7yAwRsBgagoaGSkpI8BwdkBgY3AAA7OztXBgbnBQasBQZjYlHXAAAACHRSTlMAGoji/v/N5NWsSTAAAAEJSURBVHgBfJAFAsIwEARD28B14wnuDv9/IRHcpn6d5ISxTlU3/CtNXXXi/y7/Q7fDKv6XivX+Cz12zU+PGL3UwUoswd9eC6wEWwiZwyQFBNG7oABtimA0oD4EC0C4GCYnAFjymWdB66CSoILuD4ajzNg/CUFgkoQJ2ulsXhg9CwuDVhLJFmY5H7nCiyAXWhHZmGk5X6X0Ph7PKWidcmyw3i7nO//ZRYiLFy5uY/e/BLmAVFgconD0hVeBNphMsKaY4lQ4+1fh0Ne6r5Jw5U3gJICWkvA9RZ6nJf+1i8N6EgXaTPh3gV8GSQLglICpABUQo0BdDkUBC4YKIEBKkwRTNcF8QTBnEcybAMAPI6C2e4V+AAAAAElFTkSuQmCC" alt="FILMES">
+            </a>
+            <h3>MegaFilmeshd</h3>
+          </div>
+          
+          <div class="card">
+            <a href="https://seriesflixtv2.site/" target="_blank">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAATlBMVEVHcEwICAgICAgICAgJCQkICAgICAgKCgoICAgICAgHCAjsEyIACAcABwX0EyPwEyL4EyNSDRFsDhTDEh45DA6OEBjYEyCtERwZCgt8DhUXhjhgAAAACnRSTlMA5InIKKthEkTyEGpQBwAAATJJREFUKJFtkusagyAIhnewVQaetbr/Gx2gNvds/Cl7+0A+uN3GmOfb/1imVXM8Xz/oRQQAEID445s9CSH4EPyBCHpVQymSoY9GouQDtV4uyCw7u9UwzlNuNeT0jj9z0CNw4XYXesPIupwOn4txAqeeVCPrMvJ90ReBmntedIPbjtIo4CFPbmjSPS1L9SfuBO/ydzKcuKQRE6wvGJhas2u8oOqQTNgE2/MSLxfUCLvhfkwE+IF0yxRFXBpdapsX9oWwjbXu3FrR0PFOqV3i49pNOEK7BoDt5spURedi4kFSXXaex1Ln8uL/jTXxTACBfbQf48kjAMcO1Imxjc13XgSSbqbPenMygGsVFElDrEpXTmbDCs532a8zZ6r7pZN4SJOIONxl3NxnG+Pj/9rPSqnx/AZKgxrJLDVsdQAAAABJRU5ErkJggg==" alt="FILMES">
+            </a>
+            <h3>Seriesflixtv2</h3>
+          </div>
+
+          <div class="card">
+            <a href="LINKS" target="_blank">
+              <img src="IMAGENS" alt="FILMES">
+            </a>
+            <h3>FILMES</h3>
+          </div>
+          
+          <div class="card">
+            <a href="LINKS" target="_blank">
+              <img src="IMAGENS" alt="FILMES">
+            </a>
+            <h3>FILMES</h3>
+          </div>
+
+        </div>
+      </section>
+
+<!--MANGA-->
+
+      <section id="manga">
+        <h2>Mangás</h2>
+        <div class="cards-container">
+
+          <div class="card">
+             <a href="https://mangaonline.blog/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAMFBMVEVHcEyoGyCoHCGlGx+lGyCnHCGkHCCjHSGkHSGmHCGkHCGmHSGlHCClHSGlHCClHSFpuRfgAAAAEHRSTlMACj0YJE7E/+ln84p217CgYkMtawAAAKJJREFUeAHFjSWUAgEURe+6ez9nE+6Wp5HI9IIknI9DoycqjV7wTiXhfXqaiENP8F3f44Ly6+BewQ3efwV8kjO2ZJjZFWXu5SCZfcGzRFUpdiT5IXNNCFZ4FcedJP1l3gUtjb/CNjUyIITj6EvQSXfSMGXaJJjft/vtudXvf+u1faulnmWlbtsxjcyuPfDKmNG2VVMEJGfG7eDPCR4FXArXkg3LwTz4wM3TmQAAAABJRU5ErkJggg==" alt="Mangá 1">
+             </a>
+            <h3>Manga Online</h3>
+                  </div>
+
+
+          <div class="card">
+             <a href="https://remangas.net/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAQlBMVEULCwtHcEwiIiIZGRkKCgobGxsREREAAAAlJSUsLCwnJycdHR0PDw8XFxcZGRlmZmZHR0cYGBg4ODg1NTUSEhIlJSUbYCDCAAAAFnRSTlMBAHjH/63v/2xRpYz51LgMGJ0vPdpcmlYm2wAAAPlJREFUeAFl0oGqhCAUhGEnj45mlub2/q96LWtvqz+EwMdQhOodMGkxANQYYFmzTr0Yz+k580yMwhdvR+CsF8oS1w3dUGHl4h0TurfifLKwziT1UsPOqx1qDLlhQA/nYxsuUEMovPODIgl1+Zz4GXEj7f2L1KgLeZx7MejxGskGH2F2KIxL0k3+YBiXUk1HMtIOuLMlIiydwl+UE4BlRTe0lXRK3k1HiQkKtQcn0s5G2JqBLazpQWdny2/ijZgpPnjwN70BRqHlf+izY3PrUTc5B+fji2QqWRsPKM0u0WE6UvtW+RVTcNWuQHjJ6ruLh5KjFVodyr/cxx+Q0AwDg4WUJQAAAABJRU5ErkJggg==" alt="Mangá 2">
+             </a>
+            <h3>Remangas</h3>
+                  </div>
+
+          
+          <div class="card">
+             <a href="https://flowermanga.net/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABGlBMVEVHcEz///////////////////////////////////////////////////////////////////////8CAQMmIyYbGR359/X+8uJDQUbalnrq5+YxKSsREBROTU8tLjdWVFvn4t9mY2b45tTq3tOFgYSnoqBzamx+d3vuwaA+NjZINTG6nY718u/e2tqbgHXVvq/txK+fYE0xGxu/sq/Bq5+gjITDwcTOzMt9Wk5ZR0Hz0rdaMivX1NOMeW7aysDEu7WUkZGxlomwq6v53sashHZyUEKVioVtXlfJppHcqo+wNhxoPjSJRy7drp7GjHCic2egmZjq0scjDAvIgGTuspFoUU2mBwKBaV5yAAAQHUFLJBveMgPOVzfoZB/PcbI5AAAAEnRSTlMAG+Nmi8cX8UI17N9j3F6Ev+lFF/K0AAACRUlEQVQokXVT104cQQBb4C7LkdCmbO9997Zc7733RifJ//9GBgICIsVPI1ljeWwPRb0jk0rTANDpVIb6Fyc0Y65LnX2SaAz94wt1dCxMHkb9eBuXbbvcFb5/++BOgbln9jktBARhlJgaOP3ghE62FApMGIYGM5jEApO8s0fAZADTL5qaxjBmaPYj0C0C8Ff5uNjVwt0om03sElHozLqg3ALM+atP7a5V7UbVYlwel7P9WinbqVTKnYi5ICQ9dSK7rLWXcS1ez0abh3Yp7FaKTPWMvF07VNxqfTKt1fLzBj+/3RYmPcFyhYGQoVI73WYGtlS/2fDDnMfyfLMOQc8BYnRJpeUqaDkirt0aDYNlzRyfL0Cn5+t6ckXRLoYQIz8/NFkC07jN16Ejy/DZuqYAIpDkIF+6G7GssXT5m7Ekc5KrSIBiqj0JY66+Wq82rMEuZrl8E0FJtgAGFK1qAx9N/S3fMIwhO/T4VYAwJG71ayrtSBYS7/DDxmvMhzmeqGIkYglC9YpKVW0k1nWMawb/+9fPRS7AnILJXXVwSWUEiERO58RCc3F/f78o6r4fIE7VAxICRcuyjhTVVR338fExv7NUhVOQgvSzl+CjXttRFE5Ws9vn5nzqc+T4VKkIF6+VtWxRURQs7mdjL5dIosIti0+V87eyLVhAfjs4iO2GNyJmAqclv5VNZuI2p+1+Vo/7M28MOakArc8j6h1gYBWa8WpJ0jl85l6m2ZIRRIm3gQRq9Hmar6PWbLXheWtnp519HfV/vsMfyqVjTbeFnbkAAAAASUVORK5CYII=" alt="Mangá 3">
+             </a>
+            <h3>Flower Manga</h3>
+                  </div>
+
+   <div class="card">
+             <a href="https://mangaplus.shueisha.co.jp/updates" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABOFBMVEVHcEz7+vf////////Z1tVCPz/PzOn///////////+9vsL///99fIz///////////////9bZYlaPDGfnL3///8bDgkTAAD39PSEgoEAAADGxcTaOgGmf2alpKQKAABWUE8iGhr329i7tbZ+e3uqi2/liHbHqZjYMQO2iGzRuKvtrKL86eTQo4Hr6ejiaFfbQgTWAwBYVlaLa1aTd2ahn554dnffXkLroJDCm4GrZFa1kn91Ukawq6nd29znk4msjn3zz8rPAADZJAyjbl0zKimXQDrYGQDdqYHZRD5oZmbou63CNjSkg3eLKiZeSj7wxbf828abl5KNUkDkgGRydpbgtY/UycjMbmO5UzjLgn2eUy+yIx+ipL5ZAABALiV9YlOoRz+OFhDDiDqnLSd9f6TeWCBWX4QhAAeq56ZoAAAAFHRSTlMASHzQ/v0B/PHt+0vRedF+0kx+fwXV0j4AAAKNSURBVDiNhZNnc5tAEIbPNpJspScrI+AcA6IKJCRQ7713Sxr3mvL//0EOsBOPnUzeL7uz+9ztlV2EEAru7u3/Re93g8jTDvxTb/6T94ggxF0vDxAXAGoAIxno2kmeJgEDIIh2IXcCIH8HsIjlkiCrhmWpKlnGyQAf0B4kuXycy8GIUw2wrNyJlefyRt6AOKfS8BGFCKCqBOBkSwbOUjlObglyKweqzNUg5AKtZE4dNHqpXgpauXmqF08l873k3Au4wKAJ0BwMUkK8WUu1oNGkk82H2+K4ZZCACwgNAEEQyJEbxAAYoYrZ75sFiSUBF3BVrSyXGZb2fFrq9zcb0ymZFHglgI7yUZGi2EwgwBKg3t9IuNiddsvYByo8+/RwdCxAU6apdMddrNUlXNcpFBpGvRzlU1W+VJiMT/HGxDaWsFZA2SMvwTJMzN9Ek7rFEr7uHF4zM0nCyF8Pma+RY98rtNuSXS4zIwcz/A1Gj9WPfgOKJkkzkxrd6GGFL9uP13wGiJIzSzfmxoKm9JIzeQ1UbY2f6eJoPs+IhTr9DEj7h9QdjWknRMEUMwEloaOQGIsSpSORjmuzykJxIuXFks2cyaVEoowSzKGrCM/zxDDOQtF0e1bapmtbalnZUs+AiAvo+llJwfbUXk6c89XFxR0KVbIxomO3RCyW1ZViG/cX3fHFtFxQiuPpy0Mm6sX2Nv3zalK5PZ3I9dXDq2uKLLBH7sefnbcL2v2KNO2LdwAIeH1RPF3h+9Vb0vavANH1qLvBub1efyGD8+KziMJDgKsp8+NyvQ4+jR757qyfHXYC2c4QKgwfvvz26c9wPjYMpEl/JCixCqGqWN3xxxu929s/8EUFwo/ewf7bz+74/wJswIhGt9U+jwAAAABJRU5ErkJggg==" alt="Mangá 2">
+             </a>
+            <h3>Manga Plus</h3>
+                  </div>
+
+          
+          <div class="card">
+             <a href="https://leitordemanga.com/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEz5Ozv7Nzf6ODj1QEHrT079NTX7NzfyRkf9NTXiaGf3PDz6OTn/MTH+MjKZbKq8AAAADXRSTlMAgcaTRhvisjDvC12nXgHP9QAAAHpJREFUKJHF0d0OgCAIBeAEf8qE93/ctDVT0NZVndtvHCYuy7/ZMQS0I4mJ6QwbZfaiks3NLQ936jrLsy0CiTR7nTTiG41CsvNWIqzodW14QArvalHjXnF9eopemhpcxfk4tvfrz8DiUw3PLTfXvRClFUbwHowb0Ic5AM3HDwyBT0AtAAAAAElFTkSuQmCC" alt="Mangá 3">
+             </a>
+            <h3>Leitor de Mangá</h3>
+                  </div>
+
+          <div class="card">
+             <a href="https://mangalivre.blog/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAS1BMVEVHcEyPTiSOTicOHz3Gahy9ZyCUUib2ghb/mCH/jxEAGj0AASr///+CRyd6QyoADzTHys+WnKXi5OeorLJ9hJBkbHpJUmQ6RFny9PcGA3WrAAAACnRSTlMA/fn/qrbyYiIss11daQAAALdJREFUKJHdkusOgyAMRnGoaAuWu3v/J11B3UwUH2DnT0lOWpL2E0JM/WgujP0kGGXgFqO4z4C8BZZZ9A3HdhBjW77EPhWIgV+tc6skxDU6F9e9ZkQ6JESrN6zV3lrPjwibJKe/eMBCDjpglXiSFut3hL4t5f/LSmMJwb/f3kY6Sx9iSmX/ttTAq98lZCd5EoMpbRWly7CfjI40EB0xoHqyx5g8BuwxmkIt96FeVIn8PHTLhW7gvg/DNB2hOl8cAAAAAABJRU5ErkJggg==" alt="Mangá 2">
+             </a>
+            <h3>Manga Livre</h3>
+                  </div>
+
+          
+          <div class="card">
+             <a href="https://www.lermangas.com.br/" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEVHcEwDq9gDrNkDrtsDrdsDrtsDrtoDrdgFncoErt0ErdkDrdoDrtsDr9sDrM8DrtoDr9qlwzpAAAAAEXRSTlMAGk+Evd3x/Qgkc5etyRFhOmUNIMUAAAHCSURBVHgBZVMJgsQgCKuKigri/1+7gbZ7DXMqAUIK12spF6qt9d5bpZLT9dd45LmEVMlN1sxj//bvXMSvzXLOswAqJf9CpLxUpSCKeRwzm6K68nj9A2eZJyGEz1zFRjpxNd78fnBWDKYeykjqiLsKI7/crM+k1tXSGxbQaxTEe3ZGVOtNDuM/ECZaBnIBOdNNFfG9ruFgP5sKiOZJEeNcK1SKKI73EZr5QtMl+RlcmsvocNhNdK2LJKhEzdZhOgc/8rp8V6Wn3e0tBKKc/QpE9WreFnMAQFHxwPSWmZ1muxrZBgCnqb0W81ars48aAQCF0GPVrjmdUr1XRAWgo8TDMaMCAeDNIofzYNwFhw2LSL1LOMIGEjuHCkrZcF9DBcWPW1sgugNAa84lGvfhaoER29GmC1XKqt9uxVHU9dpXXkQhdRRwqyozn2MIqJN5ihSfAXHuSwS5MuaKeZ+lOtMQKicetyX82DS4+Zbd1prHCG37wJAT4uSx31twshUkGH9HDvZgOBbBW/0e2vEC+E7xM7TPBM8z9lth/x37WBxSKuYYhhflldbv/eR39cLmu3qfy0sar8/lheFxPnJibu+hC0pfrb0ZIi/cZsEAAAAASUVORK5CYII=" alt="Mangá 3">
+             </a>
+            <h3>Ler Manga</h3>
+                  </div>
+          
+          <div class="card">
+             <a href="LINKS" target="_blank">
+            <img src="IMAGENS" alt="Mangá 2">
+             </a>
+            <h3>NOME</h3>
+                  </div>
+
+          
+          <div class="card">
+             <a href="LINKS" target="_blank">
+            <img src="IMAGENS" alt="Mangá 3">
+             </a>
+            <h3>NOME</h3>
+                  </div>
+          
+
+          <div class="card">
+             <a href="LINKS" target="_blank">
+            <img src="IMAGENS" alt="Mangá 2">
+             </a>
+            <h3>NOME</h3>
+                  </div>
+
+          
+          <div class="card">
+             <a href="LINKS" target="_blank">
+            <img src="IMAGENS" alt="Mangá 3">
+             </a>
+            <h3>NOME</h3>
+                  </div>
+          
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Matrix background
+    document.addEventListener('DOMContentLoaded', function () {
+      const matrixBg = document.getElementById('matrixBackground');
+      const columns = Math.floor(window.innerWidth / 20);
+
+      for (let i = 0; i < columns; i++) {
+        const column = document.createElement('div');
+        column.className = 'matrix-column';
+        column.style.left = `${i * 20}px`;
+        column.style.animationDuration = `${5 + Math.random() * 10}s`;
+        matrixBg.appendChild(column);
+      }
+
+      // Navegação desktop
+      const links = document.querySelectorAll(".tab-link");
+      const sections = document.querySelectorAll("main section");
+
+      links.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          links.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+
+          const target = link.getAttribute("data-tab");
+
+          sections.forEach(section => {
+            section.classList.remove("active");
+            if (section.id === target) {
+              section.classList.add("active");
+            }
+          });
+        });
+      });
+
+      // Navegação mobile
+      const mobileCards = document.querySelectorAll(".mobile-nav-card");
+
+      mobileCards.forEach(card => {
+        card.addEventListener("click", () => {
+          const target = card.getAttribute("data-tab");
+          sections.forEach(section => {
+            section.classList.remove("active");
+            if (section.id === target) {
+              section.classList.add("active");
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

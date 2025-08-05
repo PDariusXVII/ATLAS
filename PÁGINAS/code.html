@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR" coupert-item="9AF8D9A4E502F3784AD24272D81F0381">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CÓDIGOS HTML</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* Estilos CSS aprimorados com animações */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: hsl(251, 41%, 4%);
+      color: #e0e0e0;
+      margin: 0;
+      font-family: 'Arial', sans-serif; /* Mantido Arial, mas pode ser alterado */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav {
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background-color: rgba(10, 10, 10, 0.8); /* Fundo semi-transparente para o nav */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: fixed; /* Fixa o nav no topo */
+      top: 0;
+      left: 0;
+      z-index: 1000; /* Garante que o nav fique acima de outros elementos */
+    }
+
+    .nav-brand > img {
+      width: 5.3rem;
+    }
+
+    .content {
+      padding-top: 80px; /* Ajusta o padding para o nav fixo */
+      width: 100%;
+      max-width: 1200px;
+      overflow: scroll;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 30px;
+      margin-top: 80px; /* Adiciona margem superior para compensar o nav fixo */
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 2px solid #00cf07;
+      border-radius: 8px;
+      overflow: auto;
+      background: #1d1d1d;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.8rem; /* Um pouco maior */
+      margin-bottom: 40px;
+      color: #4CAF50;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no título */
+    }
+
+    .portfolio-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1400px;
+      padding: 20px;
+    }
+
+    .portfolio-frame {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição mais suave e profissional */
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      min-height: 700px;
+      opacity: 0; /* Começa invisível para animação de entrada */
+      transform: translateY(20px); /* Começa um pouco abaixo para animação de entrada */
+      animation: fadeInSlideUp 0.6s ease-out forwards; /* Aplica a animação */
+    }
+
+    .portfolio-frame:hover {
+      transform: translateY(-5px) scale(1.02); /* Levemente para cima e um pouco maior */
+      box-shadow: 0 10px 25px rgba(0, 207, 7, 0.3); /* Sombra mais proeminente e com cor do tema */
+    }
+
+    /* Animação de entrada para os frames */
+    @keyframes fadeInSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .frame-header {
+      background-color: #00cf07;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.6rem; /* Um pouco maior */
+      font-weight: bold;
+      letter-spacing: 1px; /* Espaçamento entre letras */
+    }
+
+    .frame-body {
+      padding: 20px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column; /* Permite que o botão fique abaixo do iframe */
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Estilos para o menu de categoria */
+    .dropdown-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .category-btn {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .category-btn:hover {
+      background-color: #2a2a2a;
+    }
+
+    .category-btn .fas.fa-chevron-down {
+      transition: transform 0.3s ease; /* Transição para a rotação */
+    }
+
+    .dropdown-container:hover .category-btn .fas.fa-chevron-down {
+      transform: rotate(180deg); /* Gira a seta quando o dropdown está ativo */
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #1a1a1a;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+      z-index: 1;
+      border-radius: 5px;
+      padding: 10px 0;
+      top: 100%; /* Posiciona abaixo do botão */
+      left: 0;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .dropdown-container:hover .dropdown-menu {
+      display: grid; /* Usa grid para o layout dos botões */
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu button {
+      background-color: transparent;
+      border: none;
+      padding: 10px 15px;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dropdown-menu button:hover {
+      background-color: rgba(0, 207, 7, 0.2); /* Cor de destaque sutil */
+      transform: translateX(5px); /* Desliza ligeiramente para a direita */
+    }
+
+    .dropdown-menu button a {
+      color: #e0e0e0;
+      text-decoration: none;
+      display: flex; /* Para alinhar span e count */
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .dropdown-menu button span:last-child {
+      background-color: #00cf07;
+      color: white;
+      border-radius: 3px;
+      padding: 2px 6px;
+      font-size: 0.8em;
+    }
+
+    /* Estilos para o perfil */
+    .profile-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .profile-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #e0e0e0;
+      transition: color 0.3s ease;
+    }
+
+    .profile-link:hover {
+      color: #00cf07;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #00cf07; /* Borda verde */
+      transition: border-color 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      border-color: #00bd06;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .online-status {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 10px;
+      height: 10px;
+      background-color: #00ff00; /* Verde para online */
+      border-radius: 50%;
+      border: 2px solid #1a1a1a;
+      animation: pulse-online 1.5s infinite; /* Animação de pulso para status online */
+    }
+
+    @keyframes pulse-online {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+      }
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .nav-menu {
+        width: 100%;
+      }
+
+      .dropdown-container {
+        width: 100%;
+      }
+
+      .category-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .dropdown-menu {
+        position: static; /* Remove o posicionamento absoluto em telas pequenas */
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      main {
+        padding: 15px;
+        margin-top: 120px; /* Ajusta para o nav expandido */
+      }
+
+      .portfolio-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+        margin-bottom: 30px;
+      }
+
+      .portfolio-frame {
+        min-height: 450px; /* Ajusta a altura mínima */
+      }
+
+      .portfolio-frame iframe {
+        height: 300px; /* Ajusta a altura do iframe */
+      }
+
+      .download-btn {
+        width: 95%;
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <nav class="nav">
+    <div class="nav-left">
+      <ul class="nav-menu">
+        <li>
+          <div class="dropdown-container">
+            <div class="nav-link category-btn">
+              <span>Categoria</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-menu grid">
+              <button><span>All</span><span id="all-count">0</span></button>
+              <button><a href="/Categória/ALBUM.html"><span>ALBUM</span><span id="album-count">0</span></a></button>
+              <button><a href="/Categória/ANIMATION.html"><span>ANIMATION</span><span id="animation-count">0</span></a></button>
+              <button><a href="/Categória/BUTTONS.html"><span>BUTTONS</span><span id="buttons-count">0</span></a></button>
+              <button><a href="/Categória/CARDS.html"><span>CARDS</span><span id="cards-count">0</span></a></button>
+              <button><a href="/Categória/CONTAINERS.html"><span>CONTAINERS</span><span id="containers-count">0</span></a></button>
+              <button><a href="/Categória/CURSOR.html"><span>CURSOR</span><span id="cursor-count">0</span></a></button>
+              <button><a href="/Categória/FOORTER.html"><span>FOOTER</span><span id="footer-count">0</span></a></button>
+              <button><a href="/Categória/FORMS.html"><span>FORMS</span><span id="forms-count">0</span></a></button>
+              <button><a href="/Categória/INPUT.html"><span>INPUT</span><span id="input-count">0</span></a></button>
+              <button><a href="/Categória/INPUT FIELD.html"><span>INPUT FIELD</span><span id="inputfield-count">0</span></a></button>
+              <button><a href="/Categória/LOADERS.html"><span>LOADERS</span><span id="loaders-count">0</span></a></button>
+              <button><a href="/Categória/MENU.html"><span>MENU</span><span id="menu-count">0</span></a></button>
+              <button><a href="/Categória/NAVBAR.html"><span>NAVBAR</span><span id="navbar-count">0</span></a></button>
+              <button><a href="/Categória/TEMA.html"><span>TEMA</span><span id="tema-count">0</span></a></button>
+              <button><a href="/Categória/TEXT.html"><span>TEXT</span><span id="text-count">0</span></a></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <div class="dropdown-container">
+        <button class="profile-btn">
+          <a href="/PÁGINAS/perfil.html" class="profile-link">
+            <span class="profile-text">Perfil</span>
+            <div class="profile-pic">
+              <img src="https://img.icons8.com/?size=100&amp;id=oSEP73WFJpT2&amp;format=png&amp;color=000000" alt="Profile Picture">
+              <div class="online-status"></div>
+            </div>
+          </a>
+        </button>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Portfólio de Códigos HTML</h1>
+    <div class="portfolio-container">
+      <div class="portfolio-frame">
+        <div class="frame-header">ALBUM</div>
+        <div class="frame-body">
+          <iframe src="/Categória/ALBUM.html" title="ALBUM"></iframe>
+      
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">ANIMATION</div>
+        <div class="frame-body">
+          <iframe src="/Categória/ANIMATION.html" title="ANIMATION"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">BUTTONS</div>
+        <div class="frame-body">
+          <iframe src="/Categória/BUTTONS.html" title="BUTTONS"></iframe>
+          <div class="download-section">
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">CARDS</div>
+        <div class="frame-body">
+          <iframe src="/Categória/CARDS.html" title="CARDS"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">CONTAINERS</div>
+        <div class="frame-body">
+          <iframe src="/Categória/CONTAINERS.html" title="CONTAINERS"></iframe>
+          <div class="download-section">
+             <i class="fas fa-download"></i>
+            <button class="download-btn" onclick="downloadFrame('CONTAINERS')">
+            </i> 
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">CURSOR</div>
+        <div class="frame-body">
+          <iframe src="/Categória/CURSOR.html" title="CURSOR"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">FOOTER</div>
+        <div class="frame-body">
+          <iframe src="/Categória/FOORTER.html" title="FOOTER"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">FORMS</div>
+        <div class="frame-body">
+          <iframe src="/Categória/FORMS.html" title="FORMS"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">INPUT FIELD</div>
+        <div class="frame-body">
+          <iframe src="/Categória/INPUT FIELD.html" title="INPUT FIELD"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">INPUT</div>
+        <div class="frame-body">
+          <iframe src="/Categória/INPUT.html" title="INPUT"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">LOADERS</div>
+        <div class="frame-body">
+          <iframe src="/Categória/LOADERS.html" title="LOADERS"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">MENU</div>
+        <div class="frame-body">
+          <iframe src="/Categória/MENU.html" title="MENU"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">NAVBAR</div>
+        <div class="frame-body">
+          <iframe src="/Categória/NAVBAR.html" title="NAVBAR"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">TEMA</div>
+        <div class="frame-body">
+          <iframe src="/Categória/TEMA.html" title="TEMA"></iframe>
+        </div>
+      </div>
+      
+      <div class="portfolio-frame">
+        <div class="frame-header">TEXT</div>
+        <div class="frame-body">
+          <iframe src="/Categória/TEXT.html" title="TEXT"></iframe>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <script src="/JS/code.js"></script>  
+  <script>
+    function downloadFrame(frameName) {
+      const url = `/Categória/${frameName}.html`;
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${frameName}.html`;
+      link.target = '_blank';
+      link.click();
+    }
+  </script>  
+
+  <script>
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    } else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+  </script>
+</body>
+</html>

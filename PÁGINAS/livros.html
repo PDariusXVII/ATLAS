@@ -1,0 +1,2078 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+    
+
+
+  <link rel="stylesheet" href="/CSS/livros.css">
+
+
+
+<link rel="stylesheet" href="/CSS/SCOLL.CSS">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Variável para armazenar o link do botão selecionado
+            let selectedLink = "";
+
+            // Quando um botão é selecionado
+            $(".bookmarkBtn").on('click', function () {
+                // Marcar o botão como selecionado
+                $(this).addClass('selected').siblings().removeClass('selected');
+
+                // Atualizar o link com base no botão selecionado
+                selectedLink = $(this).data('link');
+            });
+
+            // Ação do botão "Baixar"
+            $(".baixar").on('click', function () {
+                if (selectedLink) {
+                    // Abrir o link selecionado para download
+                    window.location.href = selectedLink;
+                } else {
+                    alert("Por favor, selecione uma opção para baixar.");
+                }
+            });
+        });
+    </script>
+
+<style>
+    .hidden {
+    display: none;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">Biblioteca</div>
+
+        <div class="header-content">
+            <div class="conter">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <div class="search"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="cards-container">
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8LAc2WVwvUJR78s9VQJPgKxy1qicZMaJ7VyHYMSuGIcswHm08fQH84fhM7aVJjNeSgQS3SlvxexHl9DvII-d9rxzUzqTWM0hYT4aTGI-JWIys1igiJynFSSs7LscfpYu_TH8zWa058Ys/s640/capa-tormenta-de-espadas.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 22px;">A Tormenta de Espadas</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/A Tormenta de Espadas.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>
+                    </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/A%20Tormenta%20de%20Espadas.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar" download>
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/A1q+wZFZbGL._SY342_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">A Dança dos Dragões</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/A Dança dos Dragões.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/A%20Dan%C3%A7a%20dos%20Drag%C3%B5es.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/71tYpdeGdrL._AC_UF894,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 18px;">Cavaleiro dos Setes Reinos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/Cavaleiro dos Setes Reinos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/Cavaleiro%20dos%20Setes%20Reinos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/91PglZzF9kL.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros">Fúria dos Reis</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/Fúria dos Reis.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>
+                    </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/F%C3%BAria%20dos%20Reis.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/81j1UaQEcDL._SY300_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros">Fogo e Sangue</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/O MUNDO DE GELO E FOGO.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/Fogo%20e%20Sangue.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://books.google.com.br/books/publisher/content?id=DLKMDwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U3BQ_q5h1Il8EkHR2VpmK6uoNogzQ&w=1280" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 22px;">A Guerra dos Tronos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/A Guerra dos Tronos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/A%20Guerra%20dos%20Tronos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://imagens.disal.com.br/produtos/ampliada/5879795.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">O Festim dos Corvos</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/O Festim dos Corvos.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/O%20Festim%20dos%20Corvos.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/618TXC2ibUL._AC_UF1000,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">O Mundo de Gelo & Fogo</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/O MUNDO DE GELO E FOGO.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">PDF</p>
+                    </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/O%20MUNDO%20DE%20GELO%20E%20FOGO.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>
+                        </span>
+                        <p class="text">EPUB</p>
+                    </button>
+                </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/61rI8vcG9BL._AC_UF894,1000_QL80_.jpg" alt="Product Image" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 23px;">Mulheres Perigosas</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/MULHERES PERIGOSAS.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>     </button>
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/MULHERES%20PERIGOSAS.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>  </span>     <p class="text">EPUB</p>    </button>   </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div> <!---FIM-->
+
+
+            <div class="container"> <!---INICIO-->
+                <div class="images">
+                    <img src="https://m.media-amazon.com/images/I/51XKrZGssyL._AC_SY200_QL15_.jpg" />
+                    <div class="product">
+                        <p class="autor">George R.R. Martin</p>
+                        <h1 class="livros" style="font-size: 20px;">O príncipe de Westeros e outras histórias</h1>
+                    </div>
+                </div>
+                <div class="pick">Escolha uma opção:</div>
+                <div class="sizes">
+                    <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/GELO E FOGO/PDF/O PRÍNCIPE DE WESTEROS E OUTRAS HISTÓRIAS.pdf">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">PDF</p>     </button>
+                    
+                    <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/GELO%20E%20FOGO/EPUB/O%20PR%C3%8DNCIPE%20DE%20WESTEROS%20E%20OUTRAS%20HIST%C3%93RIAS.epub">
+                        <span class="IconContainer">
+                            <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                            </svg>      </span>     <p class="text">EPUB</p>    </button>       </div>
+                <br>
+                <div class="download">
+                    <button class="baixar">
+                        Baixar
+                        <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                        </svg>      </button>       </div>      </div> <!---FIM-->
+                      
+                        
+
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/81jbivNEVML._AC_UF1000,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros">a Câmara Secreta</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/A CÂMARA SECRETA.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/A%20C%C3%82MARA%20SECRETA.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVS2On0EhQ4nYbtcagnEn6DeYkOQ8hjdw_CakG3VpGMzmPg93QkdBS_Nk&s=10" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros">a Ordem da Fênix</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/A ORDEM DA FENIX.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/A%20ORDEM%20DA%20FENIX.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://static.wixstatic.com/media/742ca6_feaa7d7894b0460cb61e93ea47684b8a~mv2.png/v1/fill/w_568,h_816,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/742ca6_feaa7d7894b0460cb61e93ea47684b8a~mv2.png" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros">a Pedra Filosofal</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/A PEDRA FILOSOFAL.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/A%20PEDRA%20FILOSOFAL.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_UUbtvjTKQxwPQgNJ_2gjKtkeadBn33Y7FTAUku8T72ZOYXol" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 19px;">Animais Fantásticos e Onde Habitam</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/ANIMAIS FANTÁSTICOS E ONDE HABITAM.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/ANIMAIS%20FANT%C3%81STICOS%20E%20ONDE%20HABITAM.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+                        
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://vivalivro.com.br/DynamicItems/Catalog/2c619002-3e31-4ba4-91cd-c1ede1fbf5c3falandopeloscotovelos_md_W270.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 18px;">Animais Fantásticos: Os crimes de Grindelwald</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/ANIMAIS FANTÁSTICOS E OS CRIMES DE GRINDELWALD.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/ANIMAIS%20FANT%C3%81STICOS%20E%20OS%20CRIMES%20DE%20GRINDELWALD.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTWGhqfz2tslm8qTQOoStJ2ipbhIl_FO7qwPu3UwkXQ0zvT0fhDC3AnuiV_DUmqg_ZBJc56bdSHSCFn9hh8Oxr3cwCKOvUP2TJExrVU2C8th6WHtjGdn7fe&usqp=CAE" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 24px;">as Relíquias da Morte</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/AS RELÍQUIAS DA MORTE.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/AS%20REL%C3%8DQUIAS%20DA%20MORTE.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://0.academia-photos.com/attachment_thumbnails/87166667/mini_magick20220607-21115-2xmehq.png?1654642437" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros">a Criança Amaldiçoada</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/CRIANÇA AMALDIÇOADA.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/CRIAN%C3%87A%20AMALDI%C3%87OADA.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/71keI2xOvML._SY342_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 23px;">Os Contos de Beedle, o Bardo</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/O Bardo Os Contos.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/O%20Bardo%20Os%20Contos.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://static.wixstatic.com/media/742ca6_a635f6925ad5434db1eaf85a5fcbdfc2~mv2.png/v1/fill/w_568,h_816,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/742ca6_a635f6925ad5434db1eaf85a5fcbdfc2~mv2.png" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros">o Cálice de Fogo</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/O CALICE DE FOGO.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/O%20CALICE%20DE%20FOGO.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://rocco.com.br/wp-content/uploads/2024/04/9786555324068.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 24px;">o Enigma do Príncipe</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/O ENIGMA DO PRÍNCIPE.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/O%20ENIGMA%20DO%20PR%C3%8DNCIPE.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://books.google.com.br/books/publisher/content?id=qDYQCwAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U0qQYW0uegAdEsHCpJk2ZmSwdZIfA&w=1280" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 20px;">o Prisioneiro de Azkaban</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/O PRISIONEIRO DE AZKABAN.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/O%20PRISIONEIRO%20DE%20AZKABAN.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+            
+            
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTQaWN7pmq2RFUiXsACu6uLGHz_iTrMbt4eAXnDNvw_AHmzq1l1" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">J. K. Rowling</p>
+                                    <h1 class="livros" style="font-size: 20px;">Quadribol Através dos Séculos</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/HARRY POTTER/PDF/QUADRIBOL ATRAVÉS DOS SÉCULOS.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/HARRY%20POTTER/EPUB/QUADRIBOL%20ATRAV%C3%89S%20DOS%20S%C3%89CULOS.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+            
+
+                            <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/719BnWs5CEL._SY466_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">O Confronto</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários do Vampiro/PDF/O Confronto - Diarios do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20do%20Vampiro/Epub/O-Confronto-Diarios-do-Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                                                <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/714Ec4H1PdL._UF894,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">A Fúria</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários do Vampiro/PDF/A Fúria - O Diários do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20do%20Vampiro/Epub/A-F%C3%BAria-O-Di%C3%A1rios-do-Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                                                <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/71IB3b3XAsL.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">O Despertar</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários do Vampiro/PDF/O Despertar - Diarios do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20do%20Vampiro/Epub/O-Despertar-Diarios-do-Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+                        
+                                                                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/51Sxsy387nL.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Reunião Sombria</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários do Vampiro/PDF/Reunião Sombria - Diários do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20do%20Vampiro/Epub/Reuni%C3%A3o-Sombria-Di%C3%A1rios-do-Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+                               <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/71OF2UYCyPL.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">A Perda</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/The Originals (Diários do Vampiro)/PDF/A Perda - The Originals.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/The%20Originals%20(Di%C3%A1rios%20do%20Vampiro)/Epub/A%20Perda%20-%20The%20Originals.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+               
+                               <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/91Y7L8vnqQL._UF1000,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Ascenção</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/The Originals (Diários do Vampiro)/PDF/Ascenção - The Originals.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/The%20Originals%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Ascen%C3%A7%C3%A3o%20-%20The%20Originals.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+                        
+
+                               <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://i.harperapps.com/hqna/covers/9781460361467/y404.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">The Resurrection</h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/The Originals (Diários do Vampiro)/PDF/Ascenção - The Originals.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/The%20Originals%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Ascen%C3%A7%C3%A3o%20-%20The%20Originals.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+                        
+
+                                                       <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/512LlTTb-NL._UF1000,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Almas sombrias<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/O Retorno (Diários do Vampiro)/PDF/Almas sombrias - Diarios do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/O%20Retorno%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Almas%20sombrias%20-%20Diarios%20do%20Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                      <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/71HIhTI4UyL._UF894,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Anoitecer<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/O Retorno (Diários do Vampiro)/PDF/Anoitecer - Diarios do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/O%20Retorno%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Anoitecer-Diarios-do-Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+<div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/713X0lJJTXS._UF1000,1000_QL80_.jpg" alt="Product Image" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Meia-Noite<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/O Retorno (Diários do Vampiro)/PDF/Meia-Noite - Diários do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/O%20Retorno%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Meia-Noite%20-%20Di%C3%A1rios%20do%20Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/81A60h4GOtL._UF894,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Desejo<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários de Stefan (Diários do Vampiro)/PDF/Desejo - Diário do Stefan.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20de%20Stefan%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Desejo%20-%20Dia%CC%81rio%20do%20Stefan.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS401kDxlno5uG9N92MYe_wlI4UKNDpwoCR7Q&s" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Estripador<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários de Stefan (Diários do Vampiro)/PDF/Estripador - Diário do Stefan.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20de%20Stefan%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Estripador%20-%20Dia%CC%81rio%20do%20Stefan.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+                            <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/71Mxi2SdKGL._UF1000,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">O Asilo<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários de Stefan (Diários do Vampiro)/PDF/O Asilo - Diário do Stefan.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20de%20Stefan%20(Di%C3%A1rios%20do%20Vampiro)/Epub/O%20Asilo%20-%20Dia%CC%81rio%20do%20Stefan.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+                        <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/817aY9qMRuL._UF1000,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Origens<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários de Stefan (Diários do Vampiro)/PDF/Origens - Diário do Stefan.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20de%20Stefan%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Origens%20-%20Dia%CC%81rio%20do%20Stefan.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                                                <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://images.dlivros.org/L-J-Smith/sede-sangue-diarios-vampiro-diarios-stefan-2-smith_medium.webp" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Sede de Sangue<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Diários de Stefan (Diários do Vampiro)/PDF/Sede de sangue - Diário do Stefan.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Di%C3%A1rios%20de%20Stefan%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Sede%20de%20sangue%20-%20Dia%CC%81rio%20do%20Stefan.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://images.dlivros.org/L-J-Smith/arvores-diarios-vampiro-contos-4-smith_large.webp" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">As Arvores <h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Contos (Diários do Vampiro)/PDF/As Arvores - Contos.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Contos%20(Di%C3%A1rios%20do%20Vampiro)/Epub/As%20Arvores%20-%20Contos.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+                                                <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://img.skoob.com.br/qHdmN8G-xUWiOJqS-Nm0kaICjRI=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/87308/BONNIE_E_DAMON_DEPOIS_DO_EXPEDIENTE_1403660312B.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Depois do Expediente<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Contos (Diários do Vampiro)/PDF/Depois do Expediente - Contos.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Contos%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Depois%20do%20Expediente%20Contos.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://images.dlivros.org/L-J-Smith/math-elena-primeiro-encontro-diarios-vampiro-contos-1-smith_large.webp" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">MATT E ELENA_PRIMEIRO ENCONTRO<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Contos (Diários do Vampiro)/PDF/MATT E ELENA, PRIMEIRO ENCONTRO - Contos.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Contos%20(Di%C3%A1rios%20do%20Vampiro)/Epub/MATT%20E%20ELENA_PRIMEIRO%20ENCONTRO%20-%20Contos.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://img.skoob.com.br/ghwF4XimoI3hfdNP2jMRJ0_Bgno=/600x0/center/top/filters:format(jpeg)/https://skoob.s3.amazonaws.com/livros/97983/O_SANGUE_DIRA_1403660492B.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">O Sangue Dirá<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Contos (Diários do Vampiro)/PDF/O Sangue Dirá - Contos.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Contos%20(Di%C3%A1rios%20do%20Vampiro)/Epub/O%20Sangue%20Dir%C3%A1%20-%20Contos.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/81rTf5dqgaL._UF894,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Canção da lua<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Caçadores (Diários do Vampiro)/PDF/Cancao da lua - Diários do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Ca%C3%A7adores%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Cancao%20da%20lua%20-%20Di%C3%A1rios%20do%20Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/91ooF9mS42L._UF894,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Destino<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Caçadores (Diários do Vampiro)/PDF/Destino - Diários do Vampiro.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Ca%C3%A7adores%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Destino%20-%20Di%C3%A1rios%20do%20Vampiro.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="https://m.media-amazon.com/images/I/81gdRlqx+HL._UF894,1000_QL80_.jpg" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">Espectro<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/Caçadores (Diários do Vampiro)/PDF/Espectro - Caçadores.pdf">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="https://github.com/Mvin2006/LIVROS/raw/refs/heads/main/Ca%C3%A7adores%20(Di%C3%A1rios%20do%20Vampiro)/Epub/Espectro%20-%20Ca%C3%A7adores.epub">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+
+
+
+
+                                                    <div class="container"> <!---INICIO-->
+                            <div class="images">
+                                <img src="IMAGENS" />
+                                <div class="product">
+                                    <p class="autor">L. J. Smith</p>
+                                    <h1 class="livros" style="font-size: 20px;">NOME<h1>
+                                </div>
+                            </div>
+                            <div class="pick">Escolha uma opção:</div>
+                            <div class="sizes">
+                                <button class="bookmarkBtn" data-link="https://mvin2006.github.io/LIVROS/LINK">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">PDF</p>
+                                </button>
+                                
+                                <button class="bookmarkBtn" data-link="LINKEPUB">
+                                    <span class="IconContainer">
+                                        <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                                            <path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="text">EPUB</p>
+                                </button>
+                            </div>
+                            <br>
+                            <div class="download">
+                                <button class="baixar">
+                                    Baixar
+                                    <svg class="seta" viewBox="0 0 24 24" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div> <!---FIM-->
+       
+            
+
+
+        </div><!--FIM DO FIM-->
+    </div><!--FIM DO FIM FIM-->
+
+<script src="/JS/search.js"></script>
+<script src="/JS/loadCards.js"></script>
+
+</body>
+</html>

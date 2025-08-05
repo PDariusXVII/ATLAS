@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTER</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+
+    <link rel="stylesheet" href="/CSS/C GERAL.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h1>FOOTER</h1>
+
+    <!-- Contêiner de todos os frames -->
+    <div class="portfolio-container">
+        
+        <!-- Frame 1 -->
+        <div class="portfolio-frame-footer">
+            <div class="frame-header">
+                <h2>Projeto 1</h2>
+            </div>
+            <div class="frame-body">
+                <iframe src="https://Mvin2006.github.io/CODIGO/FOOTER/Social Icons.html"></iframe>
+                <div class="buttonContainer" role="button" aria-label="Download Button">
+                    <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/FOOTER/Social%20Icons.html" target="_blank" class="download-btn" onclick="downloadProject(1)">
+                    </span><span></span>
+                     <span></span><span></span>
+                       Baixar
+                   </a>
+                </div>
+            </div>
+        </div>
+
+             <!-- Frame 2 -->
+             <div class="portfolio-frame-footer">
+                <div class="frame-header">
+                    <h2>Projeto 2</h2>
+                </div>
+                <div class="frame-body">
+                    <iframe src="https://Mvin2006.github.io/CODIGO/FOOTER/Emoji.html"></iframe>
+                    <div class="buttonContainer" role="button" aria-label="Download Button">
+                        <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/FOOTER/Emoji.html" target="_blank" class="download-btn" onclick="downloadProject(2)">
+                        </span><span></span>
+                         <span></span><span></span>
+                           Baixar
+                       </a>
+                    </div>
+                </div>
+            </div>
+
+
+                            <!-- Frame 3 -->
+             <div class="portfolio-frame-footer">
+                <div class="frame-header">
+                    <h2>Projeto 3</h2>
+                </div>
+                <div class="frame-body">
+                    <iframe src="https://Mvin2006.github.io/CODIGO/FOOTER/Marque Social Icons Source Code.html"></iframe>
+                    <div class="buttonContainer" role="button" aria-label="Download Button">
+                        <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/FOOTER/Marque%20Social%20Icons%20Source%20Code.html" target="_blank" class="download-btn" onclick="downloadProject(3)">
+                        </span><span></span>
+                         <span></span><span></span>
+                           Baixar
+                       </a>
+                    </div>
+                </div>
+            </div>
+
+    </div> <!--FIM-->
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/JS/C GERAL.js"></script>
+
+    <script>
+    function updateCategoryCounts() {
+  // Contagem real de elementos com a classe 'portfolio-frame-footer'
+  const footerCount = document.querySelectorAll('.portfolio-frame-footer').length;
+
+  // Atualiza a contagem no localStorage (se desejar persistir essa contagem entre recarregamentos)
+  localStorage.setItem('footer-count', footerCount);
+
+  // Atualiza o valor mostrado na página
+  document.getElementById('footer-count').innerText = footerCount;
+
+  // Atualiza o contador total de itens (considerando todas as categorias)
+  let totalItems = foorterCount; // Total de animações (ou adicione outras categorias, conforme necessário)
+  document.getElementById('all-count').innerText = totalItems;
+}
+
+// Executa a atualização ao carregar a página
+document.addEventListener("DOMContentLoaded", updateCategoryCounts);
+ </script>
+    
+</body>
+</html>

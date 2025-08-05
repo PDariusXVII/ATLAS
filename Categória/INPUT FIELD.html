@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPUT FIELD</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+
+    <link rel="stylesheet" href="/CSS/C GERAL.css">
+    <link rel="stylesheet" href="/CSS MOBILE/C GERAL.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h1>INPUT FIELD</h1>
+
+    <!-- Contêiner de todos os frames -->
+    <div class="portfolio-container">
+        
+        <!-- Frame 1 -->
+        <div class="portfolio-frame-inputfield">
+            <div class="frame-header">
+                <h2>Projeto 1</h2>
+            </div>
+            <div class="frame-body">
+                <iframe src="https://Mvin2006.github.io/CODIGO/INPUT FIELD/Animated input Field (05-11-23).html"></iframe>
+                <div class="buttonContainer" role="button" aria-label="Download Button">
+                    <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/INPUT%20FIELD/Animated%20input%20Field%20(05-11-23).html" target="_blank" class="download-btn" onclick="downloadProject(1)">
+                    </span><span></span>
+                     <span></span><span></span>
+                       Baixar
+                   </a>
+                </div>
+            </div>
+        </div>
+
+             <!-- Frame 2 -->
+             <div class="portfolio-frame-inputfield">
+                <div class="frame-header">
+                    <h2>Projeto 2</h2>
+                </div>
+                <div class="frame-body">
+                    <iframe src="https://Mvin2006.github.io/CODIGO/INPUT FIELD/Gradient Input (21-08-23).html"></iframe>
+                    <div class="buttonContainer" role="button" aria-label="Download Button">
+                        <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/INPUT%20FIELD/Gradient%20Input%20(21-08-23).html" target="_blank" class="download-btn" onclick="downloadProject(2)">
+                        </span><span></span>
+                         <span></span><span></span>
+                           Baixar
+                       </a>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Frame 3 -->
+                    <div class="portfolio-frame-inputfield">
+                        <div class="frame-header">
+                            <h2>Projeto 3</h2>
+                        </div>
+                        <div class="frame-body">
+                            <iframe src="https://Mvin2006.github.io/CODIGO/INPUT FIELD/Input Label Animation.html"></iframe>
+                            <div class="buttonContainer" role="button" aria-label="Download Button">
+                                <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/INPUT%20FIELD/Input%20Label%20Animation.html" target="_blank" class="download-btn" onclick="downloadProject(3)">
+                                </span><span></span>
+                                 <span></span><span></span>
+                                   Baixar
+                               </a>
+                            </div>
+                        </div>
+                    </div>
+
+                            <!-- Frame 4 -->
+             <div class="portfolio-frame-inputfield">
+                <div class="frame-header">
+                    <h2>Projeto 4</h2>
+                </div>
+                <div class="frame-body">
+                    <iframe src="https://Mvin2006.github.io/CODIGO/INPUT FIELD/Password Reveal Codings.html"></iframe>
+                    <div class="buttonContainer" role="button" aria-label="Download Button">
+                        <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/INPUT%20FIELD/Password%20Reveal%20Codings.html" target="_blank" class="download-btn" onclick="downloadProject(4)">
+                        </span><span></span>
+                         <span></span><span></span>
+                           Baixar
+                       </a>
+                    </div>
+                </div>
+            </div>
+
+               <!-- Frame 5 -->
+        <div class="portfolio-frame-inputfield">
+            <div class="frame-header">
+                <h2>Projeto 5</h2>
+            </div>
+            <div class="frame-body">
+                <iframe src="https://Mvin2006.github.io/CODIGO/INPUT FIELD/Subscribe Button (01-11-23).html"></iframe>
+                <div class="buttonContainer" role="button" aria-label="Download Button">
+                    <a href="https://github.com/Mvin2006/CODIGO/raw/refs/heads/main/INPUT%20FIELD/Subscribe%20Button%20(01-11-23).html" target="_blank" class="download-btn" onclick="downloadProject(5)">
+                    </span><span></span>
+                     <span></span><span></span>
+                       Baixar
+                   </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <!--FIM-->
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/JS/C GERAL.js"></script>
+
+    <script>
+    function updateCategoryCounts() {
+  // Contagem real de elementos com a classe 'portfolio-frame-inputfield'
+  const inputfieldCount = document.querySelectorAll('.portfolio-frame-inputfield').length;
+
+  // Atualiza a contagem no localStorage (se desejar persistir essa contagem entre recarregamentos)
+  localStorage.setItem('inputfield-count', inputfieldCount);
+
+  // Atualiza o valor mostrado na página
+  document.getElementById('inputfield-count').innerText = inputfieldCount;
+
+  // Atualiza o contador total de itens (considerando todas as categorias)
+  let totalItems = foorterCount; // Total de animações (ou adicione outras categorias, conforme necessário)
+  document.getElementById('all-count').innerText = totalItems;
+}
+
+// Executa a atualização ao carregar a página
+document.addEventListener("DOMContentLoaded", updateCategoryCounts);
+ </script>
+</body>
+</html>

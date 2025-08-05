@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Profile</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&amp;id=0sud7N3AznkR&amp;format=png&amp;color=000000" type="image/png">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+        }
+
+        /* Header com logo e navegação */
+        header {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: right;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            font-size: 24px;
+            color: #e0e0e0;
+        }
+
+        header nav a {
+            margin-left: 15px;
+            color: #64b5f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #bbdefb;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #1e1e1e; /* Fundo dos cards em tom mais escuro */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Título do perfil */
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #90caf9;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #b0bec5;
+            margin-bottom: 30px;
+        }
+
+        /* Seção de conteúdo */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Seção 'About me' e 'Details' */
+        .about, .details {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .about h2, .details h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #90caf9;
+        }
+
+        .about p, .details p {
+            color: #b0bec5;
+            line-height: 1.6;
+        }
+
+        .details img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 4px solid #90caf9;
+        }
+
+        .details ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .details ul li {
+            margin: 10px 0;
+            color: #b0bec5;
+        }
+
+        .details ul li span {
+            font-weight: bold;
+            color: #90caf9;
+        }
+
+        /* Ícones de redes sociais */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #90caf9;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #bbdefb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Marcus Vinicius</div>
+        <nav>
+            <a href="/PÁGINAS/index.html">Página Inicial</a>
+            <a href="https://linktr.ee/Mvin006">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Profile - Marcus Vinicius</h1>
+        <p>Estudade de Cyber e Programação</p>
+
+        <div class="content">
+            <div class="about">
+                <h2>Sobre mim</h2>
+                <p>Olá! Meu nome é Marcus Vinicius e sou um estudante apaixonado por defesa cibernética e programação. Desde jovem, sempre fui fascinado pelo mundo digital e pelos desafios que ele apresenta. Nascido em 2006, tenho me dedicado a desenvolver habilidades em áreas como segurança cibernética e forense digital, buscando entender e proteger o vasto universo da tecnologia.
+</p>
+                <p> Estou sempre em busca de novos conhecimentos e de aprimorar minhas habilidades. Acredito que a tecnologia tem um impacto profundo no nosso futuro, e meu objetivo é contribuir para um ambiente digital mais seguro e inovador.        </div>
+            <div class="details">
+                <img src="https://img.freepik.com/fotos-premium/anime-vermelho-e-preto_941211-15.jpg" alt="Profile Picture">
+                <h2>Detalhes</h2>
+                <ul>
+                    <li><span>Nome:</span> Marcus Vinicius</li>
+                    <li><span>Idade:</span> 18 anos</li>
+                    <li><span>Localização:</span> Brasil</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

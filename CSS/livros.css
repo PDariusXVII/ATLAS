@@ -1,0 +1,647 @@
+/* ==========================================================================
+   CSS/index livros.css (Estilos da Página de Livros)
+   ========================================================================== */
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos do Body */
+body {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(87, 85, 85, 1) 35%, rgba(184, 184, 184, 1) 100%);
+}
+
+/* Estilos do Header */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Título */
+.livros {
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos do Navegação */
+nav {
+    background: grey;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav li a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+/* Estilos do Ícone de Navegação */
+.nav-icon {
+    font-size: 20px;
+    color: red;
+}
+
+.nav-icon:hover {
+    color: red;
+}
+
+/* Estilos do Botão CTA */
+.cta-button {
+    background-color: red;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos do Campo de Busca */
+.conter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.conter .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #00fffc;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.conter .search:hover {
+    cursor: pointer;
+}
+
+.conter .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 18px;
+    right: 0;
+    bottom: 0;
+    left: 18px;
+    width: 10px;
+    height: 1px;
+    background: #000;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.conter .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: all 0.5s;
+}
+
+/* Estilos do Input de Busca */
+.conter input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #00fffc;
+    color: #000;
+    text-shadow: 0 0 10px #00fffc;
+    padding: 0 60px 0 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 #00fffc, 0 15px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.conter input:hover {
+    cursor: pointer;
+}
+
+.conter input:focus {
+    width: 250px;
+    opacity: 1;
+    cursor: text;
+}
+
+.conter input:focus ~ .search {
+    right: -220px;
+    background: #151515;
+    z-index: 6;
+}
+
+.conter input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+}
+
+.conter input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+}
+
+.conter input::placeholder {
+    color: #000;
+    opacity: 0.8;
+    font-weight: bolder;
+}
+
+/* ==========================================================================
+   CSS/cards dos livros.css (Estilos dos Cards de Livros)
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.link::before,
+.link::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00fffc;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+}
+
+.link::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+.link::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.link:hover::before,
+.link:hover::after,
+.active::before,
+.active::after {
+    transform: scaleX(1);
+}
+
+.name {
+    position: absolute;
+    top: 70%;
+    font-size: 11px;
+    color: #00fffc;
+    font-weight: 800;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 30%;
+    min-width: 280px;
+    max-width: 380px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    min-height: 410px;
+    height: 460px;
+    background: rgba(0, 0, 0, 0.596);
+    box-shadow: 0 5px 15px 10px rgba(25, 142, 174, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.container img {
+    margin: 0 auto;
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
+.pick {
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sizes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15 0px;
+}
+
+.bookmarkBtn {
+    width: 80;
+    height: 35px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.bookmarkBtn.selected {
+    background-color: #27a700;
+    border-color: #fff;
+}
+
+.IconContainer {
+    width: 30px;
+    height: 33px;
+    background: rgb(255, 217, 0);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.seta {
+    width: 30px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+    width: 90px;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: 0.3s;
+}
+
+.product {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.product p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.product h1 {
+    font-size: 1.8rem;
+    margin: 5px 0;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.baixar {
+    width: 150px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(43, 43, 43);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 15px;
+    height: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.baixar:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.baixar:hover .icon {
+    transform: translate(4px);
+}
+
+.baixar:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.baixar::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+    60% {
+        left: 100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+/* ==========================================================================
+   CSS MOBILE/index livros.css (Responsividade Livros)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        background-image: url("/ATLAS/IMAGEM/homem mb.jpg"),
+        linear-gradient(rgba(0, 174, 255, 0.5), rgba(0, 0, 255, 0.5));
+        background-size: cover, cover;
+        background-repeat: no-repeat;
+        background-position: top, top;
+        background-color: rgba(0, 0, 255, 0.7);
+    }
+
+    .livros {
+        color: white;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .conter {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 240px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .conter .search {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: #00fffc;
+        border-radius: 50%;
+        transition: all 1s;
+        z-index: 4;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .conter .search:hover {
+        cursor: pointer;
+    }
+
+    .conter .search::after {
+        content: "";
+        position: absolute;
+        margin: auto;
+        top: -5px;
+        right: 0;
+        bottom: 0;
+        left: -5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        transition: all 0.5s;
+    }
+
+    .conter input {
+        font-family: "Inconsolata", monospace;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background: #00fffc;
+        color: #000;
+        text-shadow: 0 0 10px #00fffc;
+        padding: 0 60px 0 15px;
+        border-radius: 30px;
+        box-shadow: 0 0 20px 0 #00fffc, 0 15px 20px 0 rgba(0, 0, 0, 0.2);
+        transition: all 1s;
+        opacity: 0;
+        z-index: 5;
+        font-weight: bolder;
+        letter-spacing: 0.1em;
+    }
+
+    .conter input:hover {
+        cursor: pointer;
+    }
+
+    .conter input:focus {
+        width: 190px;
+        opacity: 1;
+        cursor: text;
+    }
+
+    .conter input:focus ~ .search {
+        right: -210px;
+        background: #151515;
+        z-index: 6;
+    }
+
+    .conter input:focus ~ .search::before {
+        top: 0;
+        left: 0;
+        width: 20px;
+    }
+
+    .conter input:focus ~ .search::after {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        border: none;
+        background: white;
+        border-radius: 0%;
+        transform: rotate(-45deg);
+    }
+
+    .conter input::placeholder {
+        color: #000;
+        opacity: 0.8;
+        font-weight: bolder;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .con {
+        height: 0;
+        width: 0;
+    }
+}
