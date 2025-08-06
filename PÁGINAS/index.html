@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   <style>
+    /* CSS Geral */
     * {
       margin: 0;
       padding: 0;
@@ -32,9 +33,9 @@
       grid-template-rows: auto 1fr auto;
       font-family: 'Poppins', sans-serif;
       min-height: 100vh;
-      background: url("/ATLAS/IMAGEM/bg.jpg") no-repeat center center / cover;
       color: #fff;
       gap: 0;
+      background: url("/ATLAS/IMAGEM/bg.jpg") no-repeat center center / cover; /* Imagem de fundo para desktop */
     }
 
     header {
@@ -49,34 +50,6 @@
     header h1 {
       font-size: 1.4rem;
       letter-spacing: 1px;
-    }
-
-    header nav {
-      margin-top: 10px;
-    }
-
-    header nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    header nav ul li a {
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      position: relative;
-      padding: 8px 12px;
-      transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-      border-radius: 8px;
-    }
-
-    header nav ul li a:hover {
-      color: black;
-      background-color: #fff;
-      transform: scale(1.05);
     }
 
     aside {
@@ -134,8 +107,8 @@
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      flex: 1 1 300px;        /* cresce e encolhe, base 300px */
-      max-width: 320px;       /* largura máxima do card */
+      flex: 1 1 300px; /* cresce e encolhe, base 300px */
+      max-width: 320px; /* largura máxima do card */
       text-align: center;
       margin: 0 auto;
       display: flex;
@@ -191,83 +164,153 @@
       filter: brightness(0.98);
     }
 
-    .github-link {
-      margin-top: 12px;
-    }
-
-    .github-link a {
-      color: #fff;
-      font-size: 24px;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-
-    .github-link a:hover {
-      color: #ccc;
-      transform: scale(1.1);
-    }
-
-    footer {
-      grid-area: footer;
-      background: #333;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-    }
 
     @keyframes fadeIn {
       to { opacity: 1; }
     }
 
-    /* RESPONSIVO */
-    @media (max-width: 1024px) {
-      .card { max-width: 300px; }
-      .imagem-centralizada img { max-width: 220px; }
-      body { grid-template-columns: 180px 1fr; }
-    }
 
-    @media (max-width: 768px) {
-      body {
-        grid-template-areas:
-          "header"
-          "main"
-          "footer";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-      }
 
-      aside {
-        display: none;
-      }
 
-      header nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
 
-      .card {
-        flex: 1 1 100%;
-        max-width: 720px;
-        margin: 0 10px;
-      }
+/* CSS para Mobile - Versão Aprimorada */
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column; /* Mantém o layout em coluna */
+    background: url("/ATLAS/IMAGEM/homem mb.jpg") no-repeat center center / cover; 
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+    color: #fff; /* Cor do texto */
+  }
 
-      .imagem-centralizada img {
-        max-width: 100%;
-      }
+  header {
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Gradiente para o cabeçalho */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Para posicionar elementos dentro do cabeçalho */
+  }
 
-      main {
-        padding: 20px;
-        gap: 20px;
-      }
-    }
+  header h1 {
+    font-size: 1.8rem; /* Tamanho do título maior */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+  }
 
-    @media (max-width: 420px) {
-      header h1 { font-size: 1.1rem; }
-      .card { padding: 16px; }
-      .card h2 { font-size: 1rem; }
-      .card p { font-size: 0.92rem; }
-    }
+  .profile-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: auto;
+    max-width: 200px;
+  }
+
+  .profile-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
+    justify-content: center; /* Centraliza os cards */
+    align-items: center; /* Alinha os cards verticalmente */
+    gap: 15px; /* Espaçamento entre os cards */
+    flex-grow: 1; /* Permite que o main cresça */
+  }
+
+  /* Cards */
+  .card {
+    background: rgba(243, 242, 242, 0.1); /* Aumenta a opacidade para melhor visibilidade */
+    border-radius: 10px;
+    padding: 15px; /* Diminui o padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 90%; /* Diminui a largura dos cards */
+    max-width: 150px; /* largura máxima do card */
+    text-align: center;
+    margin: 0 auto; /* Centraliza o card */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Diminui o espaço entre os elementos do card */
+  }
+
+  .card h2 {
+    font-size: 1.2rem; /* Aumenta o tamanho do título */
+    color: #ffcccb; /* Cor do título */
+  }
+
+  .card p {
+    color: #eee;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 8px;
+    flex-grow: 1;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  }
+
+  /* Imagem centralizada dentro do card */
+  .imagem-centralizada {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  /* Ajustes das imagens: responsivas e com limite de largura */
+  .imagem-centralizada img {
+    width: 100%;
+    max-width: 120px; /* limite em telas menores */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    display: block;
+  }
+
+  .imagem-centralizada a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .imagem-centralizada img:hover {
+    transform: scale(1.03);
+    filter: brightness(0.98);
+  }
+
+  /* Removendo o footer da versão mobile */
+  footer {
+    display: none; /* Oculta o footer */
+  }
+
+  aside {
+    display: none; /* Oculta o aside */
+  }
+}
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -279,13 +322,15 @@
     <div class="sidebar">
       <h3>AURÉLIO SOL</h3>
       <ul>
-        <li><a href="https://pdariusxvii.github.io/ATLAS/P%C3%81GINAS/perfil.html"><i class="bi bi-person"></i> Perfil</a></li>
+        <li>
+          <a href="https://pdariusxvii.github.io/ATLAS/P%C3%81GINAS/perfil.html">
+          <i class="bi bi-person"></i> Perfil</a>
+        </li>
       </ul>
     </div>
   </aside>
 
   <main>
-   
     <div class="card">
       <h2>Livros</h2>
       <div class="imagem-centralizada">
@@ -293,17 +338,17 @@
           <img src="https://www.filantropia.ong/imagens/conteudo/YFE7FFN2N0RABVUGKGFC/gife-apresenta-nova-versao-de-biblioteca-virtual7474.jpg" alt="Livros">
         </a>
       </div>
-      <p>Descubra uma variedade de livros interessantes.</p>
+    
     </div>
 
     <div class="card">
       <h2>Filmes</h2>
       <div class="imagem-centralizada">
         <a href="/ATLAS/PÁGINAS/filmes.html">
-          <img src="https://www.martha.com.br/v2/wp-content/uploads/2017/04/filmes-mkt-digital-1.jpg" alt="Filmes">
+          <img src="https://webusupload.apowersoft.info/apowerbr/wp-content/uploads/2021/08/sites-filmes.jpg" alt="Filmes">
         </a>
       </div>
-      <p>Assista aos melhores filmes da atualidade.</p>
+
     </div>
 
     <div class="card">
@@ -313,7 +358,7 @@
           <img src="https://biomedicalodyssey.blogs.hopkinsmedicine.org/files/2020/02/programming-code-window-GettyImages-1124838925_640.jpg" alt="Códigos">
         </a>
       </div>
-      <p>Explore códigos e projetos de programação.</p>
+      
     </div>
   </main>
 
@@ -360,7 +405,3 @@
   </script>
 </body>
 </html>
-
-
-
-
